@@ -1,0 +1,39 @@
+I"�<p>A few years ago, I discovered this really nice library called <a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a>. This library allows you to download video from youtube and other platforms.
+Here is my alias to only download the mp3 and put it in a specific folder</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">alias </span><span class="nv">getmusic</span><span class="o">=</span><span class="s1">'function _music(){ cd ~/Desktop/Music/Download; youtube-dl -o "%(title)s.%(ext)s" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" -x --audio-format mp3 --no-mtime --prefer-ffmpeg $1; cd -;};_music'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Small explanation on what this function does.
+First, it goes to my Music/Download folder.
+Then -o will define the name of my file -&gt; in this case I want the name of youtube video and the extension. It will give me “Amazing_song.mp3”
+-f is for the format -&gt; so in that case, we download the video in mp4 format with the best video and audio resolution
+-x will extract the audio
+–audio-format will specify the format of the audio we just extract
+–no-mtime means we do not copy the mtime
+–prefer-ffmpeg means we prefer ffmpeg over avconv for running the postprocessors (default)</p>
+
+<p>at the end of the process the mp4 file will be automaticall deleted and
+with cd - we only return to the folder we where at the begining
+If you provide the url of a playlist it will doanload you the full playlist.
+to run this alias just do:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>getmusic https://www.youtube.com/watch\?v\=TB_eVIS8JQs
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>And if you want to download a music from soundcloud, it is even easier !</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>alias getsound='function _sound(){ cd ~/Desktop/Music/Download; youtube-dl $1;cd -;};_sound'
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>And only call your new alias</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>getsound https://soundcloud.com/buvette/the-maze
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>And that is it. You can now enjoy your MP3! But of course, if you enjoy the band, do not forget to buy them some CD, vinyl, or go to see them in concert to help them !</p>
+:ET

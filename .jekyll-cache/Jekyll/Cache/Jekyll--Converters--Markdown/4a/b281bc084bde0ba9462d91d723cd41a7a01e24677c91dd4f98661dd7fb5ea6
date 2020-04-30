@@ -1,0 +1,113 @@
+I"�<p>One month ago I wrote about Pipenv because I appreciate how it is easy to set up a virtual env and because I have to use at work.</p>
+
+<p>Today, I have discovered <a href="https://python-poetry.org/">Poetry</a>, and decide to play a bit with</p>
+
+<p>First, I create a folder, go to it and install Poetry</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir </span>poetry_test
+<span class="nb">cd </span>poetry_test
+pip3 <span class="nb">install </span>poetry
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Lets create our new python project</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>poetry new package_project
+<span class="nb">cd </span>package_project
+<span class="nb">ls
+
+</span>package_project
+├── pyproject.toml
+├── README.rst
+├── package_project
+│   └── __init__.py
+└── tests
+    ├── __init__.py
+    └── test_package_project.py
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In the pyproject.toml, you will find everything you need about your dependency and specification about your project.
+pyproject.toml is the Minimum Build System Requirements for Python Projects (<a href="https://www.python.org/dev/peps/pep-0518/">PEP 518</a>). In other words, poetry uses pyproject.toml to replace setup.py, requirements.txt, setup.cfg, MANIFEST.in and the newly added Pipfile.</p>
+
+<p>If you need to install a new library, just type</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre>poetry add requests
+Creating virtualenv package-project-py3.6 <span class="k">in</span> /Users/ddelalle/Library/Caches/pypoetry/virtualenvs
+Using version ^2.21 <span class="k">for </span>requests
+
+Updating dependencies
+Resolving dependencies... <span class="o">(</span>0.4s<span class="o">)</span>
+
+
+Package operations: 12 installs, 0 updates, 0 removals
+
+Writing lock file
+
+  - Installing six <span class="o">(</span>1.12.0<span class="o">)</span>
+  - Installing atomicwrites <span class="o">(</span>1.2.1<span class="o">)</span>
+  - Installing attrs <span class="o">(</span>18.2.0<span class="o">)</span>
+  - Installing certifi <span class="o">(</span>2018.11.29<span class="o">)</span>
+  - Installing chardet <span class="o">(</span>3.0.4<span class="o">)</span>
+  - Installing idna <span class="o">(</span>2.8<span class="o">)</span>
+  - Installing more-itertools <span class="o">(</span>5.0.0<span class="o">)</span>
+  - Installing pluggy <span class="o">(</span>0.8.1<span class="o">)</span>
+  - Installing py <span class="o">(</span>1.7.0<span class="o">)</span>
+  - Installing urllib3 <span class="o">(</span>1.24.1<span class="o">)</span>
+  - Installing pytest <span class="o">(</span>3.10.1<span class="o">)</span>
+  - Installing requests <span class="o">(</span>2.21.0<span class="o">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>If you need to activate your virtual env</p>
+
+<p><code class="highlighter-rouge">poetry shell</code></p>
+
+<p>Add a main file touch package_project/main.py and, you are now ready to start working.
+My package is finished, I want to publish it
+After a lot of hours of code, you wnat now to build and publish your code on Pypi? Really easy, just write</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>poetry build
+poetry publish
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You will fin all the commands and documentation <a href="https://python-poetry.org/docs/cli/">here</a></p>
+:ET

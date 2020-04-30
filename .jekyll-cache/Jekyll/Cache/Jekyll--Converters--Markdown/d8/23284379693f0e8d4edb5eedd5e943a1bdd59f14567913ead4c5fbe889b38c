@@ -1,0 +1,134 @@
+I"M<p>Guardfile to run :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>pylint
+pep8 through flake8
+mypy
+tests
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>associated to the file you just saved.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+</pre></td><td class="rouge-code"><pre>guard :shell <span class="k">do
+  </span>watch<span class="o">(</span>/<span class="o">(</span>?.<span class="k">*</span><span class="se">\.</span>py<span class="o">)</span>/<span class="o">)</span> <span class="k">do</span> |m|
+    file <span class="o">=</span> m[:path]
+    exclusion <span class="o">=</span> %w<span class="o">(</span>__pycache__ /migrations/ _BASE_ _REMOTE_ _BACKUP_ _LOCAL_<span class="o">)</span>
+    <span class="k">if </span>exclusion.none? <span class="o">{</span> |e| file.include? e <span class="o">}</span>
+      command_pylint <span class="o">=</span> <span class="s2">"pylint --rcfile=../.pylintrc --load-plugins=pylint_django #{file}"</span>
+      puts <span class="s1">''</span>, <span class="s1">''</span>, <span class="s2">"###  Running: #{command_pylint}"</span>
+      <span class="k">if </span>not system<span class="o">(</span>command_pylint<span class="o">)</span>
+        n <span class="s2">"Pylint issues in #{file}"</span>, <span class="s2">"Pylint"</span>, :failed
+      end
+
+      command_pep8 <span class="o">=</span> <span class="s2">"flake8 #{file}"</span>
+      puts <span class="s1">''</span>, <span class="s1">''</span>, <span class="s2">"###  Running: #{command_pep8}"</span>
+      <span class="k">if </span>not system<span class="o">(</span>command_pep8<span class="o">)</span>
+        n <span class="s2">"pep8 issues in #{file}"</span>, <span class="s2">"pep8"</span>, :failed
+      end
+
+      command_mypy <span class="o">=</span> <span class="s2">"mypy --follow-import=silent #{file}"</span>
+      puts <span class="s1">''</span>, <span class="s1">''</span>, <span class="s2">"###  Running: #{command_mypy}"</span>
+      <span class="k">if </span>not system<span class="o">(</span>command_mypy<span class="o">)</span>
+        n <span class="s2">"mypy issues in #{file}"</span>, <span class="s2">"mypy"</span>, :failed
+      end
+    end
+  end
+  watch<span class="o">(</span>/<span class="o">(</span>?.<span class="k">*</span>?<span class="se">\/</span><span class="o">)(</span>?.<span class="k">*</span><span class="se">\/</span><span class="o">)</span>?<span class="o">(</span>?.<span class="k">*</span><span class="o">)</span><span class="se">\.</span>py/<span class="o">)</span> <span class="k">do</span> |m|
+    testModule <span class="o">=</span> <span class="s2">""</span>
+    testFile <span class="o">=</span> <span class="s2">"#{m[:app]}tests/#{m[:path]}test_#{m[:filename]}"</span>
+    <span class="k">if </span>File.file? <span class="s2">"#{testFile}.py"</span>
+      testModule <span class="o">=</span> testFile.gsub <span class="s2">"/"</span>, <span class="s2">"."</span>
+    end
+    testFolder <span class="o">=</span> <span class="s2">"#{m[:app]}tests/#{m[:path]}#{m[:filename]}"</span>
+    <span class="k">if </span>File.directory? testFolder
+      testModule <span class="o">=</span> testFolder.gsub <span class="s2">"/"</span>, <span class="s2">"."</span>
+    end
+    <span class="k">if </span>not testModule.empty?
+      <span class="nb">command</span> <span class="o">=</span> <span class="s2">"python manage.py test --keepdb #{testModule}"</span>
+      puts <span class="s1">''</span>, <span class="s1">''</span>, <span class="s2">"###  Running: #{command}"</span>
+      <span class="k">if </span>not system<span class="o">(</span><span class="nb">command</span><span class="o">)</span>
+        n <span class="s2">"Test errors for #{testModule}"</span>, <span class="s2">"Django Tests"</span>, :failed
+      end
+    end
+  end
+  watch<span class="o">(</span>/<span class="o">(</span>?.<span class="k">*</span><span class="se">\/</span>tests<span class="se">\/</span><span class="o">(</span>.<span class="k">*</span><span class="se">\/</span><span class="o">)</span>?test_.<span class="k">*</span><span class="o">)</span><span class="se">\.</span>py/<span class="o">)</span> <span class="k">do</span> |m|
+    testModule <span class="o">=</span> m[:filepath].gsub <span class="s2">"/"</span>, <span class="s2">"."</span>
+    <span class="nb">command</span> <span class="o">=</span> <span class="s2">"python manage.py test --keepdb #{testModule}"</span>
+    puts <span class="s1">''</span>, <span class="s1">''</span>, <span class="s2">"###  Running: #{command}"</span>
+    <span class="k">if </span>not system<span class="o">(</span><span class="nb">command</span><span class="o">)</span>
+      n <span class="s2">"Test errors for #{testModule}"</span>, <span class="s2">"Django Tests"</span>, :failed
+    end
+  end
+end
+
+notification  :tmux,
+  display_message: <span class="nb">true</span>,
+  <span class="nb">timeout</span>: 2
+
+notification :terminal_notifier <span class="k">if</span> <span class="sb">`</span><span class="nb">uname</span><span class="sb">`</span> <span class="o">=</span>~ /Darwin/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>On your terminal you have to run</p>
+
+<p><code class="highlighter-rouge">bundle exec guard</code></p>
+:ET
