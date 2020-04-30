@@ -61,7 +61,7 @@ def create_bunch_events_for_user(request, user_id):
 
 and finally in your html file
 
-<img src="https://www.fatalement.com/static/img/import-csv-html.png" width="100">
+<img src="{{ site.baseurl }}/assets/images/posts/import-csv-html.png" width="100">
 
 The view which use this html file as template should provide the user in the context.
 

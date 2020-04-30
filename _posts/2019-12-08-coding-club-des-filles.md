@@ -10,4 +10,4 @@ At the EPFL, there is a service dedicated to promoting the sciences to young peo
 
 So yesterday, I had the honour to present my school journey, my experiences and some projects to some young ladies between 11 and 16 years old with their parents. Here is my presentation:
 
-You can download it [here](https://www.fatalement.com/static/pdf/Coding_Club.pdf)
+You can download it <a href="{{ site.baseurl }}/img/Coding_Club.pdf">here</a>

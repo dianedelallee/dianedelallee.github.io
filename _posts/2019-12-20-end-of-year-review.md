@@ -23,8 +23,8 @@ I am looking forward to see what 2020 will be going on the professionnal side
 
 Here is the evolution of my github contributions:
 
-<img src="https://www.fatalement.com/static/img/statistic/2017-contribution.png" width="1000" alt="2017-contributions">
+<img src="{{ site.baseurl }}/img/posts/2017-contribution.png" width="1000" alt="2017-contributions">
 
-<img src="https://www.fatalement.com/static/img/statistic/2018-contribution.png" width="1000" alt="2018-contributions">
+<img src="{{ site.baseurl }}/img/posts/2018-contribution.png" width="1000" alt="2018-contributions">
 
-<img src="https://www.fatalement.com/static/img/statistic/2019-contribution.png" width="1000" alt="2019-contributions">
+<img src="{{ site.baseurl }}/img/posts/2019-contribution.png" width="1000" alt="2019-contributions">

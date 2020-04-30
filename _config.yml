@@ -19,7 +19,7 @@ url: "protocol://domain"
 
 author: Diane Delallée # change to your full name
 
-avatar: https://www.fatalement.com/static/img/fatalement.png # support internet resources
+avatar: /assets/img/sample/avatar.png # support internet resources
 
 github:
   username: dianedelallee # change to your github username
