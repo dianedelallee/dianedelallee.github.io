@@ -12,7 +12,7 @@ title: About me
 <table border="0">
  <tr>
     <td>with a MSc in Computer Science from UPEM - Paris (France). +5 years of professional working experience in software products development.
-    I am now based in Lausanne, Switzerland.</td>
+    <br/><br/>I am now based in Lausanne, Switzerland.</td>
     <td><img src="{{ site.baseurl }}/img/diane_delallee_portrait.jpg" alt="diane-delallee-portait" width="150"/></td>
  </tr>
 
