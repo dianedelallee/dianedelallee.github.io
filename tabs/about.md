@@ -24,4 +24,4 @@ I am also co-founder of [Coup d'un soir](https://www.coup-dun-soir.ch/actualites
 
 I commute in fixie 🚲
 
-Last website done [Varia - bureau de paysage](https://www.varia-paysage.ch)
+Last website done [varia - bureau de paysage](https://www.varia-paysage.ch)
