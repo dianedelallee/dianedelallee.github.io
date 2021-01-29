@@ -1,0 +1,303 @@
+I"²<div id="archives" class="pl-xl-2">
+
+  
+  
+  
+    
+    
+  <span class="lead">2020</span>
+  <ul class="list-unstyled">
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">03</span>
+        <span class="date month small text-muted">Apr</span>
+        <a href="/posts/youtube-dl/">My favourite and most useful alias</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">20</span>
+        <span class="date month small text-muted">Mar</span>
+        <a href="/posts/github-settings/">Setup a new github project</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">17</span>
+        <span class="date month small text-muted">Jan</span>
+        <a href="/posts/django-with-mongodb/">Use MongoDB with Django</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">15</span>
+        <span class="date month small text-muted">Jan</span>
+        <a href="/posts/django-in-a-docker/">Launch a Django app in a Docker and be ready to put in Production</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">08</span>
+        <span class="date month small text-muted">Jan</span>
+        <a href="/posts/goals-for-the-year/">My resolutions for 2020</a>
+      </div>
+    </li>
+  
+  </ul>
+  <span class="lead">2019</span>
+  <ul class="list-unstyled">
+    
+    
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">20</span>
+        <span class="date month small text-muted">Dec</span>
+        <a href="/posts/end-of-year-review/">2019 - End of year review</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">12</span>
+        <span class="date month small text-muted">Dec</span>
+        <a href="/posts/agile-tour-lausanne/">Agile Tour 2019 Lausanne - Feedback</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">08</span>
+        <span class="date month small text-muted">Dec</span>
+        <a href="/posts/coding-club-des-filles/">Coding Club des filles</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">22</span>
+        <span class="date month small text-muted">Nov</span>
+        <a href="/posts/django-import-csv-data/">How to easily import data from CSV file in Django</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">29</span>
+        <span class="date month small text-muted">Mar</span>
+        <a href="/posts/git-stash-2/">Git stash part 2</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">17</span>
+        <span class="date month small text-muted">Mar</span>
+        <a href="/posts/json-command-line/">Json in command line</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">13</span>
+        <span class="date month small text-muted">Feb</span>
+        <a href="/posts/poetry-vs-pipenv/">Poetry instead of Pipenv?</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">28</span>
+        <span class="date month small text-muted">Jan</span>
+        <a href="/posts/namedtuple/">NamedTuple</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">21</span>
+        <span class="date month small text-muted">Jan</span>
+        <a href="/posts/guard-file/">Guard file</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">18</span>
+        <span class="date month small text-muted">Jan</span>
+        <a href="/posts/ssl-certificate/">Automatic renewal of SSL certificates for several websites</a>
+      </div>
+    </li>
+  
+  </ul>
+  <span class="lead">2018</span>
+  <ul class="list-unstyled">
+    
+    
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">21</span>
+        <span class="date month small text-muted">Dec</span>
+        <a href="/posts/git-stash/">Git Stash</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">11</span>
+        <span class="date month small text-muted">Dec</span>
+        <a href="/posts/work-python-env/">Work in a proper python environment</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">29</span>
+        <span class="date month small text-muted">Oct</span>
+        <a href="/posts/django-migration/">Django migrations</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">03</span>
+        <span class="date month small text-muted">Oct</span>
+        <a href="/posts/my-dots/">My Dotfiles</a>
+      </div>
+    </li>
+  
+
+  
+  
+  
+    <li>
+      <div>
+        
+        
+        <span class="date day">23</span>
+        <span class="date month small text-muted">Sep</span>
+        <a href="/posts/hello-world/">Hello world</a>
+      </div>
+    </li>
+  
+  </ul>
+  
+
+</div>
+:ET

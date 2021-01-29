@@ -1,0 +1,66 @@
+I"ñ<p>I have installed different tools on my computer to work well and to have a bit of fun as well.
+I have used the package manager called Homebrew to set up my computer. It allows you to install some packages or applications from the command line.</p>
+
+<p>To install Homebrew, just go to your terminal and write:
+<code class="highlighter-rouge">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></p>
+
+<p>Now you are ready to install your packages or your applications.</p>
+
+<p>For example, if you want to install LibreOffice just write:</p>
+
+<p><code class="highlighter-rouge">brew cask install libreoffice</code></p>
+
+<p>and if you want to install a library</p>
+
+<p><code class="highlighter-rouge">brew install python</code></p>
+
+<p>This is the list of apps I had installed thanks to homebrew.</p>
+
+<ul>
+  <li>alfred</li>
+  <li>bitbar</li>
+  <li>brackets</li>
+  <li>cheatsheet</li>
+  <li>bitbar</li>
+  <li>docker</li>
+  <li>firefox</li>
+  <li>flux</li>
+  <li>gimp</li>
+  <li>gitkraken</li>
+  <li>google-chrome</li>
+  <li>iterm2</li>
+  <li>marp</li>
+  <li>menubar-color</li>
+  <li>numi</li>
+  <li>spectacle</li>
+  <li>ticktick</li>
+</ul>
+
+<p>This is the list of package/libraries I had installed:</p>
+
+<ul>
+  <li>ack</li>
+  <li>ansiweather</li>
+  <li>archey</li>
+  <li>battery</li>
+  <li>cowsay</li>
+  <li>emojify</li>
+  <li>fortune</li>
+  <li>git</li>
+  <li>howdoi</li>
+  <li>htop</li>
+  <li>httpie</li>
+  <li>newsboat</li>
+  <li>node</li>
+  <li>pipenv</li>
+  <li>pycodestyle</li>
+  <li>python</li>
+  <li>terminal-notifier</li>
+  <li>vegeta</li>
+  <li>youtube-dl</li>
+  <li>zsh</li>
+  <li>zsh-completions</li>
+</ul>
+
+<p>Now you have a better environment to work! Letâ€™s continue to organize a bit more your terminal.</p>
+:ET

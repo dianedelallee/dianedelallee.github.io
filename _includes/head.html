@@ -150,4 +150,7 @@
 
   <script src="{{ site.baseurl }}/assets/js/dist/tooltip-loader.min.js" async></script>
 
+  {% if jekyll.environment == 'production' %}
+  {% include google-analytics.html %}
+  {% endif %}
 </head>

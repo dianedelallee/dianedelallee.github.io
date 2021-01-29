@@ -1,0 +1,336 @@
+I":<p>When you start a new github repo, just create the folder .github and create these three files, to help you in your day-to-day job:</p>
+
+<ul>
+  <li>auto_assign.yml</li>
+  <li>pull_request_template.md</li>
+  <li>settings.yml</li>
+</ul>
+
+<p>auto_assign.yml</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre><span class="c1"># Set to true to add reviewers to pull requests</span>
+<span class="na">addReviewers</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="c1"># Set to true to add assignees to pull requests</span>
+<span class="na">addAssignees</span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="c1"># A list of reviewers to be added to pull requests (GitHub user name)</span>
+<span class="na">reviewers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">user_name_1</span>
+  <span class="pi">-</span> <span class="s">user_name_2</span>
+  <span class="pi">-</span> <span class="s">user_name_3</span>
+
+<span class="c1"># A number of reviewers added to the pull request</span>
+<span class="c1"># Set 0 to add all the reviewers (default: 0)</span>
+<span class="na">numberOfReviewers</span><span class="pi">:</span> <span class="m">0</span>
+<span class="c1"># A list of assignees, overrides reviewers if set</span>
+<span class="c1"># assignees:</span>
+<span class="c1">#   - assigneeA</span>
+
+<span class="c1"># A number of assignees to add to the pull request</span>
+<span class="c1"># Set to 0 to add all of the assignees.</span>
+<span class="c1"># Uses numberOfReviewers if unset.</span>
+<span class="c1"># numberOfAssignees: 2</span>
+
+<span class="c1"># A list of keywords to be skipped the process that add reviewers if pull requests include it</span>
+<span class="c1"># skipKeywords:</span>
+<span class="c1">#   - wip</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>pull_request_template.md</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="gu">### What ([name of your link to the description]())</span>
+
+Changes made.
+
+<span class="gu">### Why</span>
+
+Reason for change. Problem solved.
+
+<span class="gu">### UI</span>
+
+Before/after.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>settings.yml</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+</pre></td><td class="rouge-code"><pre><span class="na">repository</span><span class="pi">:</span>
+  <span class="c1"># See https://developer.github.com/v3/repos/#edit for all available settings.</span>
+
+  <span class="c1"># The name of the repository. Changing this will rename the repository</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Name of your repo</span>
+
+  <span class="c1"># A short description of the repository that will show up on GitHub</span>
+  <span class="na">description</span><span class="pi">:</span> <span class="s">Description of your repo</span>
+
+  <span class="c1"># A comma-separated list of topics to set on the repository</span>
+  <span class="na">topics</span><span class="pi">:</span>
+
+  <span class="c1"># A URL with more information about the repository</span>
+  <span class="na">homepage</span><span class="pi">:</span> <span class="s">https://github.com/path/to/your/repo</span>
+
+  <span class="c1"># Either `true` to make the repository private, or `false` to make it public.</span>
+  <span class="na">private</span><span class="pi">:</span> <span class="no">true</span>
+
+  <span class="c1"># Either `true` to enable issues for this repository, `false` to disable them.</span>
+  <span class="na">has_issues</span><span class="pi">:</span> <span class="no">true</span>
+
+  <span class="c1"># Either `true` to enable projects for this repository, or `false` to disable them.</span>
+  <span class="c1"># If projects are disabled for the organization, passing `true` will cause an API error.</span>
+  <span class="na">has_projects</span><span class="pi">:</span> <span class="no">true</span>
+
+  <span class="c1"># Either `true` to enable the wiki for this repository, `false` to disable it.</span>
+  <span class="na">has_wiki</span><span class="pi">:</span> <span class="no">true</span>
+
+  <span class="c1"># Either `true` to enable downloads for this repository, `false` to disable them.</span>
+  <span class="na">has_downloads</span><span class="pi">:</span> <span class="no">true</span>
+
+  <span class="c1"># Updates the default branch for this repository.</span>
+  <span class="na">default_branch</span><span class="pi">:</span> <span class="s">staging</span>
+
+  <span class="c1"># Either `true` to allow squash-merging pull requests, or `false` to prevent</span>
+  <span class="c1"># squash-merging.</span>
+  <span class="na">allow_squash_merge</span><span class="pi">:</span> <span class="no">true</span>
+
+  <span class="c1"># Either `true` to allow merging pull requests with a merge commit, or `false`</span>
+  <span class="c1"># to prevent merging pull requests with merge commits.</span>
+  <span class="na">allow_merge_commit</span><span class="pi">:</span> <span class="no">false</span>
+
+  <span class="c1"># Either `true` to allow rebase-merging pull requests, or `false` to prevent</span>
+  <span class="c1"># rebase-merging.</span>
+  <span class="na">allow_rebase_merge</span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="c1"># Labels: define labels for Issues and Pull Requests</span>
+<span class="na">labels</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">🦋</span><span class="nv"> </span><span class="s">Not</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">bug</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">feature"</span>
+    <span class="na">color</span><span class="pi">:</span> <span class="s">CC0000</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Something</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">working"</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">work</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">progress</span><span class="nv"> </span><span class="s">🚧"</span>
+    <span class="na">color</span><span class="pi">:</span> <span class="s">febc2f</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">No</span><span class="nv"> </span><span class="s">need</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">moment"</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">help</span><span class="nv"> </span><span class="s">wanted</span><span class="nv"> </span><span class="s">🚁"</span>
+    <span class="na">color</span><span class="pi">:</span> <span class="s">00917D</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Need</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">another</span><span class="nv"> </span><span class="s">colleague"</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">blocked</span><span class="nv"> </span><span class="s">⛔"</span>
+    <span class="na">color</span><span class="pi">:</span> <span class="s">FC93A3</span>
+    <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">When</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">PR</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">blocked</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">another</span><span class="nv"> </span><span class="s">PR"</span>
+
+<span class="c1"># Milestones: define milestones for Issues and Pull Requests</span>
+<span class="c1">#milestones:</span>
+<span class="c1">#- title: milestone-title</span>
+<span class="c1">#description: milestone-description</span>
+<span class="c1"># The state of the milestone. Either `open` or `closed`</span>
+<span class="c1">#state: open</span>
+
+<span class="c1"># Collaborators: give specific users access to this repository.</span>
+<span class="c1">#collaborators:</span>
+<span class="c1">#- username: bkeepers</span>
+<span class="c1"># Note: Only valid on organization-owned repositories.</span>
+<span class="c1"># The permission to grant the collaborator. Can be one of:</span>
+<span class="c1"># * `pull` - can pull, but not push to or administer this repository.</span>
+<span class="c1"># * `push` - can pull and push, but not administer this repository.</span>
+<span class="c1"># * `admin` - can pull, push and administer this repository.</span>
+<span class="c1">#permission: push</span>
+
+<span class="c1"># NOTE: The APIs needed for teams are not supported yet by GitHub Apps</span>
+<span class="c1"># https://developer.github.com/v3/apps/available-endpoints/</span>
+<span class="na">teams</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">name_of_the_groups</span>
+    <span class="na">permission</span><span class="pi">:</span> <span class="s">push</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">name_of_other_groups</span>
+    <span class="na">permission</span><span class="pi">:</span> <span class="s">admin</span>
+
+<span class="na">branches</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">staging</span>
+    <span class="c1"># https://developer.github.com/v3/repos/branches/#update-branch-protection</span>
+    <span class="c1"># Branch Protection settings. Set to null to disable</span>
+    <span class="na">protection</span><span class="pi">:</span>
+      <span class="c1"># Required. Require at least one approving review on a pull request, before merging. Set to null to disable.</span>
+      <span class="na">required_pull_request_reviews</span><span class="pi">:</span>
+        <span class="c1"># The number of approvals required. (1-6)</span>
+        <span class="na">required_approving_review_count</span><span class="pi">:</span> <span class="m">2</span>
+        <span class="c1"># Dismiss approved reviews automatically when a new commit is pushed.</span>
+        <span class="na">dismiss_stale_reviews</span><span class="pi">:</span> <span class="no">false</span>
+        <span class="c1"># Blocks merge until code owners have reviewed.</span>
+        <span class="na">require_code_owner_reviews</span><span class="pi">:</span> <span class="no">false</span>
+        <span class="c1"># Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.</span>
+        <span class="na">dismissal_restrictions</span><span class="pi">:</span>
+          <span class="na">users</span><span class="pi">:</span> <span class="pi">[]</span>
+          <span class="na">teams</span><span class="pi">:</span> <span class="pi">[]</span>
+      <span class="c1"># Required. Require status checks to pass before merging. Set to null to disable</span>
+      <span class="na">required_status_checks</span><span class="pi">:</span>
+        <span class="c1"># Required. Require branches to be up to date before merging.</span>
+        <span class="na">strict</span><span class="pi">:</span> <span class="no">false</span>
+        <span class="c1"># Required. The list of status checks to require in order to merge into this branch</span>
+        <span class="na">contexts</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">continuous-integration/jenkins/pr-merge</span><span class="pi">]</span>
+      <span class="c1"># Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.</span>
+      <span class="na">enforce_admins</span><span class="pi">:</span> <span class="no">false</span>
+      <span class="c1"># Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.</span>
+      <span class="na">restrictions</span><span class="pi">:</span>
+        <span class="na">users</span><span class="pi">:</span> <span class="pi">[]</span>
+        <span class="na">teams</span><span class="pi">:</span> <span class="s">name_of_the_team</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">master</span>
+    <span class="na">protection</span><span class="pi">:</span>
+      <span class="na">restrictions</span><span class="pi">:</span>
+        <span class="na">users</span><span class="pi">:</span> <span class="pi">[]</span>
+        <span class="na">teams</span><span class="pi">:</span> <span class="s">name_of_the_team</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+:ET

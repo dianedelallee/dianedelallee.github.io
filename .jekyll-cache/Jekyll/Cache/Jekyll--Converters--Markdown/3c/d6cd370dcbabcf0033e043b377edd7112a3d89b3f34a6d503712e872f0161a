@@ -1,0 +1,44 @@
+I"<p>Thanks to an amazing tweet of <a href="http://sametmax.com/">Sam &amp; Max</a>, I have read an article about how to start with Python in 2019 which give me the opportunity to watch the video <a href="https://www.youtube.com/watch?v=wf-BqAjZb8M">Beyond PEP8</a> from Raymond Hettinger.</p>
+
+<p>This is how I discover and understand how to use the NamedTuple</p>
+
+<p>Before</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'do something'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'do something else'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This is how it works with namedtuple</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s">'color'</span><span class="p">,</span> <span class="p">[</span><span class="s">'hue'</span><span class="p">,</span> <span class="s">'saturation'</span><span class="p">,</span> <span class="s">'luminosity'</span><span class="p">])</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">170</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">p</span><span class="p">.</span><span class="n">hue</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'do something'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">p</span><span class="p">.</span><span class="n">saturation</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'do something else'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>you should use named tuples instead of tuples anywhere you think object notation will make your code more pythonic and more easily readable.</p>
+
+<p>If you need more details or/and advance tips: <a href="https://docs.python.org/3/library/collections.html#namedtuple-factory-function-for-tuples-with-named-fields">PSF documentation</a></p>
+:ET

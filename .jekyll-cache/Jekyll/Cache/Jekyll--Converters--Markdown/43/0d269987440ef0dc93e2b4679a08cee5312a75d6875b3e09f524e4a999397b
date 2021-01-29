@@ -1,0 +1,40 @@
+I"[<p>When you have made some modifications and want to achieve another tasks, I could be possible to save your modification by using stash.</p>
+
+<p><code class="highlighter-rouge">git stash</code></p>
+
+<p>Give a name to your stash by using the keyword save</p>
+
+<p><code class="highlighter-rouge">git stash save 'name of my stash'</code></p>
+
+<p>Use your last stash</p>
+
+<p><code class="highlighter-rouge">git stash pop</code></p>
+
+<p>List all your stash</p>
+
+<p><code class="highlighter-rouge">git stash list</code></p>
+
+<p>Unstash the last one (number 0)</p>
+
+<p><code class="highlighter-rouge">git stash pop stash@{0}</code></p>
+
+<p>Oups I delete my stash by using dropkeyword</p>
+
+<p>Be careful ! if you use the drop keyword, it will clear and delete your stash</p>
+
+<p><code class="highlighter-rouge">git stash drop stash@{0}</code></p>
+
+<p>If you have used drop instead of pop, you still have a way to refund your changes.</p>
+
+<p>When you use drop, you will see the hash in the terminal. By using the keyword apply, you should be able to apply your stash but it is not recreating it</p>
+
+<p><code class="highlighter-rouge">git stash apply</code></p>
+
+<p>If unfortunately, you have close your terminal, you can use the File System Consistency check to recover your hash.</p>
+
+<p><code class="highlighter-rouge">git fsck --no-reflogs | awk '/dangling commit/ {print $3}'</code></p>
+
+<p>You can also filter by date using the until and since arguments</p>
+
+<p><code class="highlighter-rouge">git show --oneline --since='2018-09-01' --until='2018-10-01' $(git fsck --no-reflogs | awk '/dangling commit/ {print $3}')</code></p>
+:ET

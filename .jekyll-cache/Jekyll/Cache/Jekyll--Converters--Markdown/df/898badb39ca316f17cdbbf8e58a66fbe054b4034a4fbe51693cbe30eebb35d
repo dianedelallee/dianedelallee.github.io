@@ -1,0 +1,56 @@
+I"U
+<p>When I am debugging a part of a code which does not work, I print quite often some dictionary of a json object in my shell.
+Most of the time it happens in one line quite difficult to read, so I open bracket and format my JSON to have better readability.</p>
+
+<p>Recently I discover <a href="https://stedolan.github.io/jq/">jq</a>, which can manage to print your JSON file in your terminal. I will save a lot of time.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s1">'{"foo": 123, "bar": "abc"}'</span> | jq
+<span class="o">{</span>
+  <span class="s2">"foo"</span>: 123,
+  <span class="s2">"bar"</span>: <span class="s2">"abc"</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>I want to access an attribute of my JSON I only need to write</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s1">'{"foo": 123, "bar": "abc"}'</span> | jq <span class="s1">'.bar'</span>
+<span class="s2">"abc"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You can also mix <code class="highlighter-rouge">curl</code> and <code class="highlighter-rouge">jq</code> if you want to display beautifully the result of an API in your terminal.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>curl https://api.github.com/repos/dianedelallee/python-exercise |jq
+<span class="o">{</span>
+  <span class="s2">"id"</span>: 144120613,
+  <span class="s2">"node_id"</span>: <span class="s2">"MDEwOlJlcG9zaXRvcnkxNDQxMjA2MTM="</span>,
+  <span class="s2">"name"</span>: <span class="s2">"python-exercise"</span>,
+  <span class="s2">"full_name"</span>: <span class="s2">"dianedelallee/python-exercise"</span>,
+  <span class="s2">"private"</span>: <span class="nb">false</span>,
+   ...
+   ...
+  <span class="s2">"default_branch"</span>: <span class="s2">"master"</span>,
+  <span class="s2">"network_count"</span>: 0,
+  <span class="s2">"subscribers_count"</span>: 1
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+:ET
