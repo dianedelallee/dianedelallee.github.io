@@ -32,3 +32,7 @@ I commute in fixie 🚲
 
 <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/39832922/activity-summary/04cc14a2015106ab1acc7dc1daadf7c7410ed2ff'>
 </iframe>
+
+----
+
+<img src="https://grass-graph.moshimo.works/images/dianedelallee.png" alt="github contribution" width>
