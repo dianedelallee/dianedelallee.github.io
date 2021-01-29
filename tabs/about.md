@@ -35,4 +35,6 @@ I commute in fixie 🚲
 
 ----
 
-<img src="https://grass-graph.moshimo.works/images/dianedelallee.png" alt="github contribution" width>
+Github contributions:
+
+[<img src="https://grass-graph.moshimo.works/images/dianedelallee.png" alt="github contribution">](https://github.com/dianedelallee)
