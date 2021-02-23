@@ -3,7 +3,7 @@ title: Automatic renewal of SSL certificates for several websites
 author: Diane Delallée
 date: 2019-01-18 20:55:00 +0800
 categories: [Blog, SSL]
-tags: [SSL]
+tags: [ssl]
 ---
 
 During the last past years, I have developed several websites and still have to maintain them.

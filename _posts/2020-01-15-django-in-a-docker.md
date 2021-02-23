@@ -3,7 +3,7 @@ title: Launch a Django app in a Docker and be ready to put in Production
 author: Diane Delallée
 date: 2020-01-15 20:55:00 +0800
 categories: [Blog, Python]
-tags: [Docker, Python, Django]
+tags: [docker, python, django]
 ---
 
 New year, new resolution, so today I have decided to play a bit with Docker, Django, Gunicorn and Nginx. So first we will create a Django in a Docker with a Postgres DB, and after we will add production environment and Nginx and Gunicorn. lets create the project

@@ -3,7 +3,7 @@ title: Use MongoDB with Django
 author: Diane Delallée
 date: 2020-01-17 20:55:00 +0800
 categories: [Blog, Python]
-tags: [Python, MongoDB, Django]
+tags: [python, mongoDB, django]
 ---
 
 We will try to use MongoDB with a Django project. To do that we will use the library called [Djongo](https://github.com/nesdis/djongo). I have take the previous project ([Django-in-a-docker]({% post_url 2020-01-15-django-in-a-docker %})) and I have removed all files relative to the production environment. I have built and run my container to check that everything works as expected. I have finally created a Super User to access the DB.

@@ -3,7 +3,7 @@ title: Work in a proper python environment
 author: Diane Delallée
 date: 2018-12-11 20:55:00 +0800
 categories: [Blog, Python]
-tags: [Python, Configuration]
+tags: [python, configuration]
 ---
 
 When you start a new python project, it is quite important to have a proper environment.

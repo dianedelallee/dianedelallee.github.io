@@ -3,7 +3,7 @@ title: NamedTuple
 author: Diane Delallée
 date: 2019-01-28 20:55:00 +0800
 categories: [Blog, Python]
-tags: [Python]
+tags: [python]
 ---
 
 Thanks to an amazing tweet of [Sam & Max](http://sametmax.com/), I have read an article about how to start with Python in 2019 which give me the opportunity to watch the video [Beyond PEP8](https://www.youtube.com/watch?v=wf-BqAjZb8M) from Raymond Hettinger.

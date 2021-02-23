@@ -3,7 +3,7 @@ title: How to use cache to install python lib with Gitlab CI
 author: Diane Delallée
 date: 2020-08-07 13:25:00 +0800
 categories: [Blog, CI]
-tags: [gitlab, CI, Python]
+tags: [gitlab, ci, python]
 ---
 
 If you have a CI process with multiple job that needs to install the same libraries, it can be very time consuming.

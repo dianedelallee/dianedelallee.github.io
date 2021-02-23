@@ -3,7 +3,7 @@ title: Lolcommits
 author: Diane Delallée
 date: 2020-06-17 16:25:00 +0800
 categories: [Blog, commit]
-tags: [github, Fun]
+tags: [github, fun]
 ---
 
 Few months ago, I discovered this really funny repo: [lolcommits](https://lolcommits.github.io/).

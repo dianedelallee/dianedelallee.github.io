@@ -3,7 +3,7 @@ title: Setup a new github project
 author: Diane Delallée
 date: 2020-03-20 20:55:00 +0800
 categories: [Blog, Configuration]
-tags: [Configuration, github]
+tags: [configuration, github]
 ---
 
 When you start a new github repo, just create the folder .github and create these three files, to help you in your day-to-day job:

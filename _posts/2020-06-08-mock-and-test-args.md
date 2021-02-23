@@ -3,7 +3,7 @@ title: Mock and how to test the arguments
 author: Diane Delallée
 date: 2020-06-08 16:25:00 +0800
 categories: [Blog, Mock]
-tags: [Mock, Test]
+tags: [mock, test]
 ---
 
 In the case you need to check the parameters with a mock was called.

@@ -3,7 +3,7 @@ title: How to mock function without typing to not use type ignore
 author: Diane Delallée
 date: 2020-08-27 08:25:00 +0800
 categories: [Blog, Python]
-tags: [mypy, Python]
+tags: [mypy, python]
 ---
 
 

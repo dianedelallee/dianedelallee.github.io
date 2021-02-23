@@ -3,7 +3,7 @@ title: My favourite and most useful alias
 author: Diane Delallée
 date: 2020-04-03 20:55:00 +0800
 categories: [Blog, Configuration]
-tags: [Configuration, alias]
+tags: [configuration, alias]
 ---
 
 A few years ago, I discovered this really nice library called [youtube-dl](https://github.com/ytdl-org/youtube-dl). This library allows you to download video from youtube and other platforms.

@@ -3,7 +3,7 @@ title: Django migrations
 author: Diane Delallée
 date: 2018-10-29 14:10:00 +0800
 categories: [Blog, Python]
-tags: [Python, Django]
+tags: [python, django]
 ---
 
 How create a named empty migration in a specific django app?
