@@ -3,7 +3,7 @@ title: How to easily import data from CSV file in Django
 author: Diane Delallée
 date: 2019-11-22 20:55:00 +0800
 categories: [Blog, Python]
-tags: [django, csv]
+tags: [Django, csv]
 ---
 
 I need to import a lot of data but I do not want to do that manually. How can I take a CSV file and import it in my Django table?
