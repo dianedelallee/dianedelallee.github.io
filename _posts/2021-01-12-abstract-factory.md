@@ -27,4 +27,3 @@ You just create a new concrete factory class and pass it to the client code.
 ## The code
 
 You can fin the code relative to this pattern in [this Github repo](https://github.com/dianedelallee/pythonDesignPattern/tree/master/patterns/creational/abstract_factory)
-I will provide a README by pattern soon.
