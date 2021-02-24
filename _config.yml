@@ -15,7 +15,7 @@ description: >- # used by seo meta and the atom feed
   Diane Delallée blog
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: "https://dianedelallee.github.io"
+url: "https://www.fatalement.com"
 
 author: Diane Delallée # change to your full name
 
@@ -36,7 +36,7 @@ social:
     - https://github.com/dianedelallee # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in
+    - https://www.linkedin.com/in/dianedelallee
 
 google_site_verification: google_meta_tag_verification # change to your verification string
 
@@ -187,6 +187,7 @@ exclude:
   - tools
   - docs
   - README.md
+  - .jekyll-cache
 
 sitemap_exclude: # Sitemap will exclude the following items.
   fuzzy:

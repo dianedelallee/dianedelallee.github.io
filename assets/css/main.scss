@@ -1427,6 +1427,24 @@ table {
       }
     }
 
+    .coffee-button{
+      margin-left: 3.5rem;
+      margin-right: 3rem;
+      font-size: 1.3rem;
+
+
+      a {
+        background-color: #FFDD00;
+        padding: {
+          left: 8px;
+          right: 8px;
+          bottom: 4px;
+        };
+        border-radius: 6px;
+
+      }
+    }
+
     .sidebar-bottom {
       margin-left: 3.5rem;
       margin-right: 3rem;
