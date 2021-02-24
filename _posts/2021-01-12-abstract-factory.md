@@ -1,7 +1,7 @@
 ---
 title: Abstract Factory in python
 author: Diane Delallée
-date: 2021-02-23 15:18:00 +0800
+date: 2021-01-12 08:56:00 +0800
 categories: [Blog, Python]
 tags: [design pattern, python]
 ---
