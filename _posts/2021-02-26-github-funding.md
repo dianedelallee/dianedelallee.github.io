@@ -39,7 +39,7 @@ You want to allow donation across all your repositories? There is an easy way.
 
 * Go to your github profile
 * If you do not have a project called `.github` create it, otherwise just open it. (cf [mine](https://github.com/dianedelallee/.github))
-* Ddd a `FUNDING.yml`  file with exactly what we have define in the other step.
+* Add a `FUNDING.yml`  file with exactly what we have define in the other step.
 * That's it. Now if you go to another repository, you will see the Sponsor button on the top right of your repo, and
 on the left side menu, you will see the section "Sponsor this project"
 
