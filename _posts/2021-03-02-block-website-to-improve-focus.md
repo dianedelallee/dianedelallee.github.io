@@ -1,7 +1,7 @@
 ---
 title: Block website to improve focuses
 author: Diane Delallée
-date: 2021-02-25 09:44:00 +0800
+date: 2021-03-02 07:44:00 +0800
 categories: [Blog, Python]
 tags: [python, cron, focus]
 ---
