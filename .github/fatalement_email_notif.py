@@ -28,7 +28,7 @@ def _send_email(article):
       server.close()
 
       print('Email sent!')
-  except Exceptionas e:
+  except Exception as e:
       print(f'Something went wrong...: {e}')
     
 def get_articles():
