@@ -26,7 +26,7 @@ jobs:
         pip install feedparser tweepy pytz
         
     - name: Publish tweet
-      run: python3 .github/workflow/fatalement_bot.py
+      run: python3 fatalement_bot.py
       env: 
         CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
         CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
