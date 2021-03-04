@@ -39,7 +39,7 @@ def _send_email(article):
     print(f'Something went wrong...: {e}')
     
 def get_articles():
-    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=96)
+    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=72)
     feed_url = "https://fatalement.com/feed.xml"
     blog_feed = feedparser.parse(feed_url)
 
