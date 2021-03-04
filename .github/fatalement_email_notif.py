@@ -1,4 +1,5 @@
 import smtplib
+import os
 
 GMAIL_ADDR = os.environ.get('GMAIL_ADDR')
 GMAIL_PWD = os.environ.get('GMAIL_PWD')
