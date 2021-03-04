@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 import os
 import smtplib
 
+import feedparser
 import pytz
 
 GMAIL_ADDR = os.environ.get('GMAIL_ADDR')
