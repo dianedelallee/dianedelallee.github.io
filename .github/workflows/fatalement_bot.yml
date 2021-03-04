@@ -26,35 +26,9 @@ jobs:
         pip install feedparser tweepy pytz
         
     - name: Publish tweet
-      run: |
-        import feedparser
-        from datetime import datetime, timedelta
-        import tweepy
-        import pytz
-
-        def _tweet_article(api, article):
-          text = f"I wrote a new article called '{article.title}'! \nYou can read it {article.link}"
-          print(f'will tweet about {article.title}')
-          api.update_status(text)
-
-
-        def get_articles():
-          previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=96)
-          feed_url = "https://fatalement.com/feed.xml"
-          blog_feed = feedparser.parse(feed_url)
-
-          auth = tweepy.OAuthHandler("${{ secrets.CONSUMER_KEY }}", "${{ secrets.CONSUMER_SECRET }}")
-          auth.set_access_token("${{ secrets.ACCESS_TOKEN }}", "${{ secrets.ACCESS_TOKEN_SECRET }}")
-          api = tweepy.API(auth)
-
-
-          for article in blog_feed.entries:
-              article_date = datetime.strptime(article.published, '%a, %d %b %Y %H:%M:%S %z')
-              if article_date >= previous_hour:
-                  _tweet_article(api, article)
-          print('----- END -----')
-            
-        
-        if __name__ == '__main__':
-          get_articles()
-
+      run: python3 fatalement_bot.py
+      env: 
+        CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+        CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
