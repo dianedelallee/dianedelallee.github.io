@@ -33,6 +33,8 @@ def get_articles():
 
     for article in blog_feed.entries:
         article_date = datetime.strptime(article.published, '%a, %d %b %Y %H:%M:%S %z')
+        print(article_date)
+        print(article_date  >= previous_hour)
         if article_date >= previous_hour:
             _tweet_article(api, article)
     print('----- END -----')
