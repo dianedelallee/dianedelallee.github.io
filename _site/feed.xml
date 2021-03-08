@@ -42,7 +42,7 @@ to tweet about the new version!&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Mar 2021 17:01:00 +0100</pubDate>
         <link>http://localhost:4000//posts/why-i-wrote-a-css-lib/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/why-i-wrote-a-css-lib/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/why-i-wrote-a-css-lib/</guid>
       </item>
     
       <item>
@@ -83,7 +83,7 @@ to read all my articles without any distractions.&lt;/p&gt;
 </description>
         <pubDate>Tue, 02 Mar 2021 00:44:00 +0100</pubDate>
         <link>http://localhost:4000//posts/block-website-to-improve-focus/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/block-website-to-improve-focus/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/block-website-to-improve-focus/</guid>
       </item>
     
       <item>
@@ -191,7 +191,7 @@ Also working with &lt;strong&gt;Angular&lt;/strong&gt;, &lt;strong&gt;Material D
 </description>
         <pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
         <link>http://localhost:4000//posts/review-2020-and-2021-goals/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/review-2020-and-2021-goals/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/review-2020-and-2021-goals/</guid>
       </item>
     
       <item>
@@ -225,7 +225,7 @@ You can find it &lt;a href=&quot;https://github.com/dianedelallee/dianedelallee.
 </description>
         <pubDate>Sat, 27 Feb 2021 04:36:00 +0100</pubDate>
         <link>http://localhost:4000//posts/feedly-and-rss/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/feedly-and-rss/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/feedly-and-rss/</guid>
       </item>
     
       <item>
@@ -284,7 +284,7 @@ on the left side menu, you will see the section “Sponsor this project”&lt;/l
 </description>
         <pubDate>Fri, 26 Feb 2021 11:36:00 +0100</pubDate>
         <link>http://localhost:4000//posts/github-funding/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/github-funding/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/github-funding/</guid>
       </item>
     
       <item>
@@ -394,7 +394,7 @@ Can be useful if you want to provide easily some examples on how to use the func
 </description>
         <pubDate>Tue, 23 Feb 2021 08:18:00 +0100</pubDate>
         <link>http://localhost:4000//posts/doctest/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/doctest/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/doctest/</guid>
       </item>
     
       <item>
@@ -421,7 +421,7 @@ You just create a new concrete factory class and pass it to the client code.&lt;
 </description>
         <pubDate>Tue, 12 Jan 2021 01:56:00 +0100</pubDate>
         <link>http://localhost:4000//posts/abstract-factory/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/abstract-factory/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/abstract-factory/</guid>
       </item>
     
       <item>
@@ -585,7 +585,7 @@ Process finished with &lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;code 0
 </description>
         <pubDate>Tue, 08 Dec 2020 03:18:00 +0100</pubDate>
         <link>http://localhost:4000//posts/structlog/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/structlog/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/structlog/</guid>
       </item>
     
       <item>
@@ -745,7 +745,7 @@ dedicated file.&lt;/p&gt;
 </description>
         <pubDate>Thu, 27 Aug 2020 02:25:00 +0200</pubDate>
         <link>http://localhost:4000//posts/mypy-avoid-type-ignore/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/mypy-avoid-type-ignore/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/mypy-avoid-type-ignore/</guid>
       </item>
     
       <item>
@@ -995,7 +995,7 @@ For Django : &lt;a href=&quot;https://gitlab.com/gitlab-org/gitlab/-/blob/master
 </description>
         <pubDate>Fri, 07 Aug 2020 07:25:00 +0200</pubDate>
         <link>http://localhost:4000//posts/gitlab-use-cache-to-install-lib/</link>
-        <guid isPermaLink="true">http://localhost:4000//posts/gitlab-use-cache-to-install-lib/</guid>
+        <guid isPermaLink="true">http://localhost:4000/posts/gitlab-use-cache-to-install-lib/</guid>
       </item>
     
   </channel>
