@@ -24,11 +24,19 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install feedparser tweepy pytz
-        
+    - name: Sleep for 30 seconds
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '30s'
     - name: Publish tweet
-      run: python3 .github/workflow/fatalement_bot.py
+      run: python3 ${GITHUB_WORKSPACE}/.github/fatalement_bot.py
       env: 
         CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
         CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+    - name: Send email
+      run: python3 ${GITHUB_WORKSPACE}/.github/fatalement_email_notif.py
+      env: 
+        GMAIL_ADDR: ${{ secrets.GMAIL_ADDR }}
+        GMAIL_PWD: ${{ secrets.GMAIL_PWD }}
