@@ -20,7 +20,7 @@ def _tweet_article(api, article):
 
 
 def get_articles():
-    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=1)
+    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=10)
     feed_url = "https://fatalement.com/feed.xml"
     blog_feed = feedparser.parse(feed_url)
 
