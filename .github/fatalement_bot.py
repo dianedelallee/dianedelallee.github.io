@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import os
+import ssl
 
 import feedparser
 import pytz
@@ -22,6 +23,8 @@ def _tweet_article(api, article):
 def get_articles():
     previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=2)
     feed_url = "https://fatalement.com/feed.xml"
+    if hasattr(ssl, '_create_unverified_context'):
+        ssl._create_default_https_context = ssl._create_unverified_context
     blog_feed = feedparser.parse(feed_url)
 
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
@@ -30,6 +33,8 @@ def get_articles():
 
     for article in blog_feed.entries:
         article_date = datetime.strptime(article.published, '%a, %d %b %Y %H:%M:%S %z')
+        print(article_date)
+        print(article_date  >= previous_hour)
         if article_date >= previous_hour:
             _tweet_article(api, article)
     print('----- END -----')
