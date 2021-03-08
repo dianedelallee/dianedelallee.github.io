@@ -1,7 +1,7 @@
 ---
 title: I decided to write a CSS library 
 author: Diane Delallée
-date: 2021-03-08 17:01:00 +0800
+date: 2021-03-08 17:01:00 +0100
 categories: [Blog, CSS]
 tags: [CSS, library, npm]
 ---
