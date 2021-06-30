@@ -64,7 +64,7 @@ class MyModel < ApplicationRecord
 end
 ```
 
-### Fixtures pour les tests
+### Fixtures to create objects for your test database
 If you need to create specific object in your test database, this is really easy and convenient.
 
 You need to create a file called `models.yml` (ex: `users.yml` for the User model) in `test/fixtures` folder, and define your object:
