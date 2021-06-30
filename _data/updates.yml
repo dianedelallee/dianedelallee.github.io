@@ -1,4 +1,49 @@
 -
+  filename: 'why-i-wrote-a-css-lib'
+  lastmod: '2021-03-08 17:25:46 +0100'
+-
+  filename: 'block-website-to-improve-focus'
+  lastmod: '2021-03-02 08:15:13 +0100'
+-
+  filename: 'review-2020-and-2021-goals'
+  lastmod: '2021-02-27 17:43:41 +0100'
+-
+  filename: 'feedly-and-rss'
+  lastmod: '2021-02-27 17:41:20 +0100'
+-
+  filename: 'github-funding'
+  lastmod: '2021-02-26 13:36:41 +0100'
+-
+  filename: 'doctest'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'abstract-factory'
+  lastmod: '2021-02-24 17:01:39 +0100'
+-
+  filename: 'mypy-avoid-type-ignore'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'gitlab-use-cache-to-install-lib'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'lolcommits'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'mock-and-test-args'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'youtube-dl'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'github-settings'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'django-with-mongodb'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'django-in-a-docker'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
   filename: 'end-of-year-review'
   lastmod: '2020-04-30 08:28:10 +0200'
 -
@@ -6,4 +51,22 @@
   lastmod: '2020-04-30 08:28:10 +0200'
 -
   filename: 'django-import-csv-data'
-  lastmod: '2020-04-30 08:28:10 +0200'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'git-stash-2'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'namedtuple'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'ssl-certificate'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'git-stash'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'work-python-env'
+  lastmod: '2021-02-23 15:12:00 +0100'
+-
+  filename: 'django-migration'
+  lastmod: '2021-02-23 15:12:00 +0100'
