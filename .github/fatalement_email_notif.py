@@ -40,7 +40,7 @@ def _send_email(article):
     
 def get_articles():
     previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=2)
-    feed_url = "https://fatalement.com/feed.xml"
+    feed_url = "https://www.fatalement.com/feed.xml"
     if hasattr(ssl, '_create_unverified_context'):
       ssl._create_default_https_context = ssl._create_unverified_context
     blog_feed = feedparser.parse(feed_url)
