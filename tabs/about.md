@@ -7,7 +7,7 @@ title: About me
 # MIT License
 ---
 
-## Python Software Engineer
+## Python and Ruby Software Engineer
 
 <table border="0">
  <tr>
