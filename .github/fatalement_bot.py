@@ -21,7 +21,7 @@ def _tweet_article(api, article):
 
 
 def get_articles():
-    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=6)
+    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=9)
     feed_url = "https://www.fatalement.com/feed.xml"
     if hasattr(ssl, '_create_unverified_context'):
         ssl._create_default_https_context = ssl._create_unverified_context
@@ -34,7 +34,7 @@ def get_articles():
     for article in blog_feed.entries:
         article_date = datetime.strptime(article.published, '%a, %d %b %Y %H:%M:%S %z')
         print(article_date)
-        print(article_date  >= previous_hour)
+        print(article_date >= previous_hour)
         if article_date >= previous_hour:
             _tweet_article(api, article)
     print('----- END -----')
