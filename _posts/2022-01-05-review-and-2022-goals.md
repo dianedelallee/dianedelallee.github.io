@@ -1,12 +1,12 @@
 ---
 title: 2021 review and 2022 Goals
 author: Diane Delallée
-Date: 2022-01-04 20:32:00 +0100 
+Date: 2022-01-05 18:32:00
 categories: [Blog, Self-Review]
 tags: [Self-Review]
 ---
 
-We are already in March 2021 so this is time to make a review of 2020 and also to set new goals/behaviour for 2021.
+It is time for the 2021 review and also to set new goals for 2022.
 
 ## 2021 review
 ### What I planed to do one year ago
