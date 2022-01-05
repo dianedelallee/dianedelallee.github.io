@@ -113,7 +113,7 @@ This new challenge is really exciting especially with the pandemic context. This
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 05 Jan 2022 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000//posts/review-and-2022-goals/</link>
+        <link>http://localhost:4000/posts/review-and-2022-goals/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/review-and-2022-goals/</guid>
       </item>
     
@@ -181,7 +181,7 @@ and you want to iterate on those attributes.&lt;/p&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 30 Nov 2021 11:12:00 +0100</pubDate>
-        <link>http://localhost:4000//posts/ruby-iteration-on-attribute/</link>
+        <link>http://localhost:4000/posts/ruby-iteration-on-attribute/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/ruby-iteration-on-attribute/</guid>
       </item>
     
@@ -474,7 +474,7 @@ for &lt;a href=&quot;https://edgeguides.rubyonrails.org/active_storage_overview.
 &lt;p&gt;This is it, now you can create other tests to ensure all your validator is properly tested.&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Sep 2021 12:12:00 +0200</pubDate>
-        <link>http://localhost:4000//posts/test-rails-validator/</link>
+        <link>http://localhost:4000/posts/test-rails-validator/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/test-rails-validator/</guid>
       </item>
     
@@ -695,7 +695,7 @@ I will explain it later&lt;/li&gt;
 &lt;p&gt;If anything is not clear enough or if you would like to discuss it, feel free to contact me.&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Sep 2021 12:12:00 +0200</pubDate>
-        <link>http://localhost:4000//posts/changelog-conflict/</link>
+        <link>http://localhost:4000/posts/changelog-conflict/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/changelog-conflict/</guid>
       </item>
     
@@ -844,7 +844,7 @@ I guess this is quite similar when you start to learn any new framework.&lt;/p&g
 &lt;p&gt;Let’s see how my learning evolves in the next weeks.&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Jun 2021 14:32:00 +0200</pubDate>
-        <link>http://localhost:4000//posts/play-with-ruby/</link>
+        <link>http://localhost:4000/posts/play-with-ruby/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/play-with-ruby/</guid>
       </item>
     
@@ -1048,7 +1048,7 @@ classes (or other semantic selectors) and mixins are necessary when you need to 
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 09 Mar 2021 13:32:00 +0100</pubDate>
-        <link>http://localhost:4000//posts/scss-tips/</link>
+        <link>http://localhost:4000/posts/scss-tips/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/scss-tips/</guid>
       </item>
     
@@ -1087,7 +1087,7 @@ to tweet about the new version!&lt;/p&gt;
 &lt;p&gt;I will write several articles to explain step-by-step the project and to be able to provide more details on each aspect.&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Mar 2021 17:01:00 +0100</pubDate>
-        <link>http://localhost:4000//posts/why-i-wrote-a-css-lib/</link>
+        <link>http://localhost:4000/posts/why-i-wrote-a-css-lib/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/why-i-wrote-a-css-lib/</guid>
       </item>
     
@@ -1128,7 +1128,7 @@ to read all my articles without any distractions.&lt;/p&gt;
 &lt;p&gt;I am really happy with those decisions, and feeling really less guilty at the end of some days!&lt;/p&gt;
 </description>
         <pubDate>Tue, 02 Mar 2021 00:44:00 +0100</pubDate>
-        <link>http://localhost:4000//posts/block-website-to-improve-focus/</link>
+        <link>http://localhost:4000/posts/block-website-to-improve-focus/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/block-website-to-improve-focus/</guid>
       </item>
     
@@ -1236,7 +1236,7 @@ Also working with &lt;strong&gt;Angular&lt;/strong&gt;, &lt;strong&gt;Material D
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000//posts/review-2020-and-2021-goals/</link>
+        <link>http://localhost:4000/posts/review-2020-and-2021-goals/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/review-2020-and-2021-goals/</guid>
       </item>
     
@@ -1270,7 +1270,7 @@ You can find it &lt;a href=&quot;https://github.com/dianedelallee/dianedelallee.
 &lt;p&gt;&lt;img src=&quot;https://fatalement.com/assets/img/sample/feedly_article.png&quot; alt=&quot;Feedly show article&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Feb 2021 04:36:00 +0100</pubDate>
-        <link>http://localhost:4000//posts/feedly-and-rss/</link>
+        <link>http://localhost:4000/posts/feedly-and-rss/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/feedly-and-rss/</guid>
       </item>
     
