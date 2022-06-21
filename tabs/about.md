@@ -37,4 +37,4 @@ I commute in fixie 🚲
 
 Github contributions:
 
-[<img src="http://ghchart.rshah.org/dianedelallee" alt="diane delallee's Github chart" />](https://github.com/dianedelallee)
+[<img src="https://ghchart.rshah.org/dianedelallee" alt="diane delallee's Github chart" />](https://github.com/dianedelallee)
