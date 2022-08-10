@@ -1,7 +1,7 @@
 ---
 title: A complete guide to revoke the Apple Sign in token
 author: Diane Delallée
-Date: 2022-08-10 12:32:00
+Date: 2022-08-10 15:32:00
 categories: [Blog, Apple, ruby]
 tags: [Apple, ruby]
 ---
