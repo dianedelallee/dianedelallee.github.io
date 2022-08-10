@@ -1,9 +1,9 @@
 ---
-title: Play with Ruby
+title: Play with ruby
 author: Diane Delallée 
 date: 2021-06-30 13:32:00 +0100 
-categories: [Blog, Ruby]
-tags: [Ruby]
+categories: [Blog, ruby]
+tags: [ruby]
 ---
 
 At the end of April, I was fired from my job due to economical decision inside the company. 

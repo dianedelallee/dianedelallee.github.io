@@ -2,7 +2,7 @@
 title: My resolutions for 2020
 author: Diane Delallée
 date: 2020-01-08 20:55:00 +0800
-categories: [Blog, Self-Review]
+categories: [Blog, self-review]
 tags: [self-review]
 ---
 

@@ -2,8 +2,8 @@
 title: Fight with changelog conflicts
 author: Diane Delallée 
 date: 2021-09-23 11:12:00 +0100 
-categories: [Blog, Ruby]
-tags: [Ruby, Changelog]
+categories: [Blog, ruby]
+tags: [ruby, Changelog]
 ---
 
 If you use a changelog to document changes in your code in a code base where several developers works, you probably have to fix changelog file conflicts.

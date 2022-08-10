@@ -2,7 +2,7 @@
 title: Coding Club des filles
 author: Diane Delallée
 date: 2019-12-08 20:55:00 +0800
-categories: [Blog, Self-Review]
+categories: [Blog, self-review]
 tags: [self-review, presentation]
 ---
 

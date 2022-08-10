@@ -2,7 +2,7 @@
 title: Agile Tour 2019 Lausanne - Feedback
 author: Diane Delallée
 date: 2019-12-12 20:55:00 +0800
-categories: [Blog, Self-Review]
+categories: [Blog, self-review]
 tags: [self-review, presentation]
 ---
 

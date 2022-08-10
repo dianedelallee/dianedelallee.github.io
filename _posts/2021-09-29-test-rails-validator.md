@@ -2,8 +2,8 @@
 title: Test Rails Validator with ActiveSupport::TestCase 
 author: Diane Delallée 
 date: 2021-09-29 11:12:00 +0100
-categories: [Blog, Ruby]
-tags: [Ruby, Rails, ActiveStorage]
+categories: [Blog, ruby]
+tags: [ruby, Rails, ActiveStorage]
 ---
 
 I needed to write a [custom validator](https://guides.rubyonrails.org/active_record_validations.html) for one of our

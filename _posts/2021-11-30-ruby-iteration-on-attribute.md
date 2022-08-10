@@ -2,8 +2,8 @@
 title: Ruby iteration on attributes
 author: Diane Delallée 
 date: 2021-11-30 11:12:00 +0100
-categories: [Blog, Ruby]
-tags: [Ruby, Test]
+categories: [Blog, ruby]
+tags: [ruby, test]
 ---
 
 When you are writing tests, you may need to update several attributes with the same value and, made some assertion on those.

@@ -2,8 +2,8 @@
 title: 2021 review and 2022 Goals
 author: Diane Delallée
 Date: 2022-01-05 18:32:00
-categories: [Blog, Self-Review]
-tags: [Self-Review]
+categories: [Blog, self-review]
+tags: [self-review]
 ---
 
 It is time for the 2021 review and also to set new goals for 2022.

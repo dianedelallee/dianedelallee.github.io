@@ -2,7 +2,7 @@
 title: Hello world
 author: Diane Delallée
 date: 2018-09-24 00:34:00 +0800
-categories: [Blog, Self-Review]
+categories: [Blog, self-review]
 tags: [self-review]
 toc: false
 ---
