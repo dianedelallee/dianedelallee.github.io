@@ -2,7 +2,7 @@
 title: Css dark-theme in root property
 author: Diane Delallée
 Date: 2022-08-11 13:06:31
-categories: [Blog]
+categories: [Blog, css]
 tags: [css, javascript]
 ---
 
