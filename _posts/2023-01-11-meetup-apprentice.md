@@ -1,8 +1,8 @@
 ---
 title: Meetup about apprentice at QoQa GQ
 author: Diane Delallée
-Date: 2022-10-26 13:06:31
-categories: [Blog, css]
+Date: 2023-01-11 16:06:31
+categories: [Blog, apprentice]
 tags: [meetup, apprentice]
 ---
 

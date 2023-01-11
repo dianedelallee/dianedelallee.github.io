@@ -21,7 +21,7 @@ def _tweet_article(api, article):
 
 
 def get_articles():
-    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=9)
+    previous_hour = datetime.today().replace(tzinfo=pytz.utc) - timedelta(hours=12)
     feed_url = "https://www.fatalement.com/feed.xml"
     if hasattr(ssl, '_create_unverified_context'):
         ssl._create_default_https_context = ssl._create_unverified_context
