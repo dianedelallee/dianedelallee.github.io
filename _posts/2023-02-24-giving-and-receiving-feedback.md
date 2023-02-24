@@ -1,5 +1,5 @@
 ---
-title: Giving and receiving feeback
+title: Giving and receiving feedbacks
 author: Diane Delallée
 Date: 2023-02-24 20:06:31
 categories: [Blog, feedback]
