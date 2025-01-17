@@ -1,2 +1,0 @@
-I"<p>New year, new resolution, so today I have decided to play a bit with Docker, Django, Gunicorn and Nginx. So first we will create a Django in a Docker with a Postgres DB, and after we will add production environment and Nginx and Gunicorn. lets create the project</p>
-:ET

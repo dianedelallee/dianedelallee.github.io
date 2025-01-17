@@ -1,2 +1,0 @@
-I"Â<p>We will try to use MongoDB with a Django project. To do that we will use the library called <a href="https://github.com/nesdis/djongo">Djongo</a>. I have take the previous project (<a href="/posts/django-in-a-docker/">Django-in-a-docker</a>) and I have removed all files relative to the production environment. I have built and run my container to check that everything works as expected. I have finally created a Super User to access the DB.</p>
-:ET
