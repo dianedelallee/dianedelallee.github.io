@@ -52,7 +52,7 @@ export default function App({ members }) {
             imageInfo={mem}
             src={mem.name}
             classNames={{
-              img: "transition duration-300 ease-in-out active:scale-108 hover:scale-108 object-cover filter grayscale-95 transition duration-500 group-hover:grayscale-0"
+              img: "transition duration-300 ease-in-out active:scale-108 hover:scale-108 "
             }}
             onTouchStart={e => e.currentTarget.classList.remove('grayscale-95')}
             onTouchEnd={e => e.currentTarget.classList.add('grayscale-95')}
