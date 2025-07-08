@@ -1,82 +1,16 @@
 ---
-import Layout from '@layouts/Default.astro';
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
-import MobileSocials from '@components/home/MobileSocials.astro';
-import { Pill } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
-import { Card } from '@eliancodes/brutal-ui';
+import Layout from '@layouts/Layout.astro';
+import MemberGrid from '@components/AllImageGrid.tsx'
+import { getCollection } from "astro:content";
 
-const passion = [
-  { name: 'QoQa', url: 'https://qoqa.ch/' },
-  { name: 'Le Romandie', url: 'https://www.leromandie.ch/' },
-  { name: 'Coup d\'un soir', url: 'https://www.coup-dun-soir.ch/actualites' },
-  { name: 'Lomography', url: 'https://www.lomography.com/homes/dianedelallee' },
-  { name: 'Vinyl collection', url: 'https://www.discogs.com/user/dianedelallee/collection' }
-];
+const imageInfo = await getCollection('imageInfo');
+const members = imageInfo.reduce((ans, item) => {
+  return [
+    ...ans,
+    ...Object.entries(item.data).map(([it, info]) => ({ name: `${item.id}/${it}`, width: info[0], height: info[1] }))
+  ];
+}, []).sort(() => Math.random() - 0.5);
 ---
-
-<Layout
-  title='Home'
-  pageTitle='Diane Delallée | Fatalement'
-  description='This is Diane Delallée personal website.'
->
-  <main class='bg-pink p-6'>
-    <MobileSocials />
-    <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
-      <div class='col-span-4'>
-        <Card>
-          <div class='flex flex-col justify-between items-start gap-4'>
-            <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
-              Diane Delallée
-            </p>
-            <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
-              Code, music, photography and orchard
-            </p>
-            <Button target={'_self'} href='mailto:diane.delallee@gmail.com?subject=Contact from fatalement.com'>
-              Contact me 📨
-            </Button>
-          </div>
-        </Card>
-      </div>
-      <div class='col-span-2'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            What I do, love and enjoy
-          </h2>
-          <ul class='flex gap-4 flex-wrap'>
-            {
-              passion.map((item) => (
-                <li>
-                  <Pill>
-                    <a
-                      class='sanchez'
-                      href={item.url}
-                      target='_blank'
-                      title={`Go to ${item.name}`}
-                    >
-                      {item.name}
-                    </a>
-                  </Pill>
-                </li>
-              ))
-            }
-          </ul>
-        </Card>
-      </div>
-      <div class='col-span-2'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            Who am I?
-          </h2>
-          <p class='poppins'>
-            A backend developer at <span class="underline decoration-double">QoQa</span> who volunteer at <span class="underline decoration-double">le Romandie</span> and do analog photography.
-          </p>
-          <p class='poppins'>
-            Living in Lausanne, Switzerland and commuting by fixie bike
-          </p>
-        </Card>
-      </div>
-    </section>
-    <RecentBlogPosts />
-  </main>
+<Layout>
+  <MemberGrid members={members} client:load />
 </Layout>

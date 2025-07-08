@@ -1,17 +1,39 @@
 ---
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
-import Layout from '@layouts/Default.astro';
-import ErrorPage from '@components/errors/404.astro';
+import Layout from '@layouts/Layout.astro';
+import { Button, Image, Link } from '@heroui/react';
+import * as emoji from 'node-emoji';
 ---
 
-<Layout
-  title='Page Not Found'
-  description='Page not found'
-  classList='h-full'
-  pageTitle='Page Not Found!'
->
-  <main class='bg-blue px-6 py-24'>
-    <ErrorPage />
-    <RecentBlogPosts />
-  </main>
+<Layout>
+	<main class="container mx-auto max-w-6xl p-10">
+		<div class="flex flex-col gap-8 w-full h-full mt-10">
+			<div class="md:text-6xl text-5xl text-center">
+				You are lost !
+			</div>
+			<div class="text-center md:text-2xl text-xl">
+                Looks like you are trying to access a page that doesn't exist.
+			</div>
+			<div class="flex w-full justify-center">
+				<Image
+					isBlurred
+					src="/images/lost.jpg"
+					classNames={{ img: 'animate-levitate w-72 md:w-96' }}
+					alt="Lost Memoji"
+					client:load
+				/>
+			</div>
+			<div class="flex w-full justify-center">
+				<Button
+					className="w-full md:w-auto"
+					as={Link}
+					href="/"
+					color="primary"
+					size="lg"
+				>
+					Back the Home
+				</Button>
+			</div>
+		</div>
+	</main>
 </Layout>
+

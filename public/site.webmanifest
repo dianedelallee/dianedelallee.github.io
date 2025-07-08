@@ -1,0 +1,22 @@
+{
+  "name": "Diane Delallée's portfolio",
+  "short_name": "Fatalment",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "",
+  "icons": [
+    {
+      "src": "/favicon/favicon-192*192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-96*96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

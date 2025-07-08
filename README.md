@@ -1,91 +1,35 @@
-# Brutal - The neobrutalist Astro theme
+![Design Photography Portfolio](https://readme-typing-svg.demolab.com/?font=Roboto&size=40&duration=4000&pause=2000&color=5D5D5D&center=true&vCenter=true&width=540&lines=Design+Photography+Portfolio.)
 
-Brutal is a minimal neobrutalist theme for [Astro](https://astro.build/). It's based on Neobrutalist Web Design, a movement that aims to create websites with a minimalistic and functional design. It has some integrations like Image Optimization, RSS, Sitemap, ready to get your SEO done right.
+Astro Theme: https://astro.build/themes/details/designphotographyportfolio/
 
-The theme has no JavaScript integration out of the box, but can always be added of course.
+Live Demo: https://cosmic-cactus-65b8d8.netlify.app/
 
-This template is based on [my own personal website](<https://www.elian.codes/>), with some more generic things added.
+## Documentation
 
-## Usage
+We provide both **English** and **Chinese** documentation for this project.  
+Please check the files in the `docs` directory for more details:
 
-You can bootstrap a new Astro project using Brutal with the following command:
+- [English documentation](./docs/README-en.md)
+- [中文文档](./docs/README-zh.md)
 
-```bash
-# npm
-npm create astro@latest -- --template eliancodes/brutal
+## Shows
 
-# pnpm
-pnpm create astro@latest --template eliancodes/brutal
+**light mode**
 
-# yarn
-yarn create astro --template eliancodes/brutal
-```
+![light mode](./public/images/screenshot-light.webp)
 
-### Commands
+**dark mode**
 
-All commands are run from the root of the project, from a terminal:
+![dark mode](./public/images/screenshot-dark.webp)
 
-(Here I use PNPM, no problem if you use NPM or Yarn)
+**phone**
 
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `pnpm install`      | Installs dependencies                              |
-| `pnpm dev`          | Starts local dev server at `localhost:4321`        |
-| `pnpm build`        | Build your production site to `./dist/`            |
-| `pnpm preview`      | Preview your build locally, before deploying       |
-| `pnpm astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `pnpm astro --help` | Get help using the Astro CLI                       |
+![phone](./public/images/screenshot-phone.webp)
 
-## Integrations
+## Usages
 
-### UnoCSS
+**You can submit your website to be displayed here.**
 
-In this theme, I'm using [UnoCSS](https://uno.antfu.me/) to generate the CSS. It's a utility-first CSS framework that uses a single class to style elements. It's very easy to use and has a lot of features. It's setup to be completely compatible with TailwindCSS, with the advantage of being able to use PureCSS icons. You can always switch out UnoCSS for TailwindCSS if you want to, without breaking the general styles.
+Tutu Designer: https://rabbitit.fun
 
-### Sitemap
-
-To generate the sitemap, you don't need to do anything. It's automatically generated when you build your site. You'll just need to switch out the `site` on `astro.config.ts` to your own.
-
-```js title="astro.config.mjs"
-import { defineConfig } from 'astro/config';
-
-export default defineConfig({
-  site: 'https://example.com',
-});
-```
-
-### RSS
-
-The RSS feed is automatically generated from the Markdown files in the `src/content/blog` folder. You can ofcourse completely change this to your own needs.
-
-The RSS will output to `https://example.com/feed.xml` by default. You can change this, by renaming `src/pages/feed.xml.js`.
-
-### Image
-
-## Components
-
-### `components/blog/`
-
-This directory contains all components for the blog.
-
-### `components/errors/`
-
-This directory contains all error components.
-
-#### `components/errors/404.astro`
-
-This component is used when a page is not found.
-
-### `components/generic/`
-
-This directory contains all generic components, reused over multiple pages.
-
-### `components/home/`
-
-This directory contains all components for the home page.
-
-### `components/layout/`
-
-This directory contains all layout components. For instance, the header and footer and `<head>` section.
-
-If you need more from this theme, don't hesitate to open an issue or reach out to me!
+![DesignPhotographyPortfolio Stars](https://api.star-history.com/svg?repos=pysunday/DesignPhotographyPortfolio)

@@ -1,43 +1,51 @@
 {
-  "name": "virtual-virgo",
-  "version": "1.2.0",
+  "name": "portfolio-diane-delallee",
   "type": "module",
-  "packageManager": "pnpm@8.6.0",
-  "author": {
-    "name": "Elian Van Cutsem",
-    "email": "hello@elian.codes",
-    "url": "https://www.elian.codes/"
-  },
-  "homepage": "https://brutal.elian.codes",
+  "version": "0.0.1",
+  "description": "Diane Delallee portfolio - creative work",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "compress-images": "node scripts/compress-images.js",
+    "auto-deploy-website": "npm run build && python scripts/auto-deploy-website.py"
+  },
+  "keywords": [
+    "astro",
+    "react",
+    "heroui",
+    "tailwindcss"
+  ],
+  "author": {
+    "name": "diane delallee",
+    "email": "diane.delallee@gmail.com"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "@eliancodes/brutal-ui": "^0.2.3",
-    "@unocss/astro": "^0.57.7",
-    "astro": "^5.1.5",
-    "astro-font": "^0.0.80",
-    "satori": "^0.5.0",
-    "satori-html": "^0.3.2"
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@heroicons/react": "^2.2.0",
+    "@heroui/react": "^2.7.9",
+    "@heroui/use-theme": "^2.1.8",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "astro": "^5.9.0",
+    "astro-icon": "^1.1.5",
+    "astro-seo": "^0.8.4",
+    "framer-motion": "^12.16.0",
+    "lodash": "^4.17.21",
+    "node-emoji": "^2.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.41",
-    "@iconify-json/uil": "^1.1.8",
-    "@resvg/resvg-js": "^2.6.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "@unocss/reset": "^0.57.7",
-    "eslint": "^8.56.0",
-    "eslint-plugin-astro": "^0.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "prettier": "^3.1.1",
-    "prettier-plugin-astro": "^0.12.2",
-    "sharp": "^0.32.6",
-    "unocss": "^0.57.7"
+    "p-limit": "^6.2.0",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }
