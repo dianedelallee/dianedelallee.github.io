@@ -6,7 +6,7 @@ Hi, I'm Diane Delalée,
 
 A backend developer at [QoQa](https://www.qoqa.ch/fr) who volunteer at [le Romandie](https://www.leromandie.ch/) and [Petzi](https://www.petzi.ch/fr/association/a-propos-de-petzi/). 
 
-I also work in a Orchard, and try to do analog photography
+I also work in a Orchard, and try to do [analog photography](https://www.instagram.com/fixie_des_alpes/)
 
 I am living in Lausanne, Switzerland.
 
