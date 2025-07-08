@@ -50,6 +50,6 @@ img {
   -webkit-user-select: none;
   user-select: none;
 }
-a {
+.about a {
   opacity: 0.5;
 }

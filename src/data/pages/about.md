@@ -1,7 +1,7 @@
 ---
 name: "about"
 ---
-<div style="font-size: 1.5rem">
+<div class="about" style="font-size: 1.5rem">
 Hi, I'm Diane Delalée,
 
 A backend developer at [QoQa](https://www.qoqa.ch/fr) who volunteer at [le Romandie](https://www.leromandie.ch/) and [Petzi](https://www.petzi.ch/fr/association/a-propos-de-petzi/). 
