@@ -34,7 +34,7 @@
     "@tailwindcss/vite": "^4.1.8",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
-    "astro": "^5.9.0",
+    "astro": "^5.14.3",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
     "framer-motion": "^12.16.0",
