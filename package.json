@@ -38,7 +38,7 @@
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
     "framer-motion": "^12.16.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "node-emoji": "^2.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
