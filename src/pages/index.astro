@@ -1,16 +1,23 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import MemberGrid from '@components/AllImageGrid.tsx'
-import { getCollection } from "astro:content";
-
-const imageInfo = await getCollection('imageInfo');
-const members = imageInfo.reduce((ans, item) => {
-  return [
-    ...ans,
-    ...Object.entries(item.data).map(([it, info]) => ({ name: `${item.id}/${it}`, width: info[0], height: info[1] }))
-  ];
-}, []).sort(() => Math.random() - 0.5);
+import Hero from '@components/home/Hero.astro';
+import Ticker from '@components/home/Ticker.astro';
+import Section from '@components/home/Section.astro';
+import Projects from '@components/home/Projects.astro';
+import FilmStrip from '@components/home/FilmStrip.astro';
+import Community from '@components/home/Community.astro';
 ---
-<Layout>
-  <MemberGrid members={members} client:load />
+<Layout bare>
+  <Hero />
+  <Ticker />
+  <Section id="projects" index="01 / Code" title="Things I built" intro="Side projects, from a pastel CSS library to an iOS widget for my favourite venue.">
+    <Projects />
+  </Section>
+  <Section id="photos" index="02 / Photo" title="Photos" intro="Mostly analog, mostly night. Scroll the strip and pick a frame to open its series.">
+    <FilmStrip />
+  </Section>
+  <Section id="community" index="03 / Community" title="Backstage" intro="Concerts only happen because someone sets up the stage. I like being one of those people.">
+    <Community />
+  </Section>
+  <div style="height: clamp(3rem, 8vw, 6rem)"></div>
 </Layout>

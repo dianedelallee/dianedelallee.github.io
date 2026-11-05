@@ -1,0 +1,139 @@
+<section class="hero" id="top">
+  <div class="copy">
+    <p class="kicker"><span class="dot" aria-hidden="true"></span> Lausanne, CH · <time id="clock" datetime="">--:--</time></p>
+    <h1><span>Diane</span> <span class="outline">Delallée</span></h1>
+    <p class="lede">
+      Backend developer. I write Python and Ruby, volunteer for live music, and take analog photos in between.
+    </p>
+    <p class="cta">
+      <a class="btn primary" href="#projects">See the code</a>
+      <a class="btn" href="#photos">See the photos</a>
+    </p>
+  </div>
+
+  <aside class="card" aria-label="About me">
+    <div class="bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>~/diane</span></div>
+    <dl>
+      <div><dt>Role</dt><dd>Backend developer at <a href="https://www.qoqa.ch/fr" target="_blank" rel="noopener">QoQa</a></dd></div>
+      <div><dt>Stack</dt><dd>Python · Ruby</dd></div>
+      <div><dt>Based</dt><dd>Lausanne, Switzerland</dd></div>
+      <div><dt>Side</dt><dd>Volunteer at <a href="https://www.leromandie.ch/" target="_blank" rel="noopener">Le Romandie</a> &amp; <a href="https://www.petzi.ch/fr/association/a-propos-de-petzi/" target="_blank" rel="noopener">Petzi</a></dd></div>
+      <div><dt>Also</dt><dd>Orchard work, <a href="https://www.instagram.com/fixie_des_alpes/" target="_blank" rel="noopener">analog photography</a></dd></div>
+    </dl>
+  </aside>
+</section>
+
+<script>
+  const el = document.getElementById('clock');
+  if (el) {
+    const fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Zurich' });
+    const tick = () => { el.textContent = fmt.format(new Date()); };
+    tick();
+    setInterval(tick, 15000);
+  }
+</script>
+
+<style>
+  .hero {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 2.5rem);
+    max-width: 78rem;
+    margin: 0 auto;
+  }
+  @media (min-width: 900px) {
+    .hero { grid-template-columns: 1.3fr 1fr; }
+  }
+  .kicker {
+    margin: 0 0 1rem;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  .dot {
+    display: inline-block;
+    width: 0.7rem; height: 0.7rem;
+    margin-right: 0.4rem;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(3.5rem, 12vw, 8.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+  h1 span { display: block; }
+  .outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--ink);
+  }
+  .lede {
+    max-width: 34rem;
+    margin: 1.75rem 0 0;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.75rem 0 0; }
+  .btn {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    border: 2px solid var(--line);
+    text-decoration: none;
+    color: var(--ink);
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn:hover { transform: translate(-3px, -3px); box-shadow: 5px 5px 0 var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 700; }
+  .btn.primary:hover { box-shadow: 5px 5px 0 var(--ink); }
+
+  .card {
+    border: 2px solid var(--line);
+    background: var(--card);
+    box-shadow: 8px 8px 0 var(--deco);
+    transform: rotate(-1.5deg);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid var(--line);
+    background: var(--ink);
+    color: var(--bg);
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.85rem;
+  }
+  .dots { display: inline-flex; gap: 0.3rem; }
+  .dots i { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--bg); opacity: 0.5; }
+  .dots i:first-child { background: var(--deco); opacity: 1; }
+  dl { margin: 0; }
+  dl > div {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px dashed var(--muted);
+  }
+  dl > div:last-child { border-bottom: 0; }
+  dt {
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    padding-top: 0.25rem;
+  }
+  dd { margin: 0; }
+  dd a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+  dd a:hover { color: var(--accent); }
+</style>

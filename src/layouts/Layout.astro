@@ -1,34 +1,37 @@
 ---
 import '@styles/global.css'
-import Header from '@components/Header.jsx'
+import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
-import ThemeSwitcher from '@components/ThemeSwitcher.tsx'
 import { SEO } from 'astro-seo';
 const pathname = Astro.url.pathname;
 interface Props {
 	title?: string;
 	description?: string;
+	bare?: boolean;
 }
 
 const {
-	title = 'Fatalement',
-	description = "Diane Delallée's portfolio - analog photography and creative projects"
+	title = 'Diane Delallée · Fatalement',
+	description = 'Diane Delallée: backend developer in Lausanne, side projects, analog photography and volunteering for live music.',
+	bare = false,
 } = Astro.props;
+const ogImage = new URL('/images/screenshot.png', Astro.site ?? Astro.url).toString();
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<script is:inline is:head>
       try {
-        const theme = localStorage.getItem('heroui-theme');
-        if (theme === 'dark' || theme === 'light') {
-          document.documentElement.classList.add(theme);
+        var theme = localStorage.getItem('heroui-theme');
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
+        document.documentElement.classList.add(theme);
       } catch (e) {
       }
     </script>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" />
 		<SEO
@@ -38,56 +41,36 @@ const {
       openGraph={{
         basic: {
           title: title,
-          type: "image/jpeg",
-          image: "/images/screenshot-light.webp",
+          type: "website",
+          image: ogImage,
         },
       }}
       extend={{
         link: [
-          {
-            rel: "icon",
-            type: "image/png",
-            sizes: "16x16",
-            href: "/favicon/favicon-16*16.png",
-          },
-          {
-            rel: "icon",
-            type: "image/png",
-            sizes: "32x32",
-            href: "/favicon/favicon-32*32.png",
-          },
-          {
-            rel: "apple-touch-icon",
-            sizes: "180x180",
-            href: "/favicon/favicon-96*96.png",
-          },
+          { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon/favicon-16*16.png" },
+          { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon/favicon-32*32.png" },
+          { rel: "apple-touch-icon", sizes: "180x180", href: "/favicon/favicon-96*96.png" },
           { rel: "manifest", href: "/site.webmanifest" },
           { rel: "sitemap", href: "/sitemap-index.xml" },
         ],
         meta: [
-          { name: "twitter:image", content: "/images/screenshot.png" },
+          { name: "twitter:image", content: ogImage },
           { name: "twitter:title", content: title },
           { name: "twitter:description", content: description },
-          { name: "viewport", content: "width=device-width" },
-          { name: "msapplication-TileColor", content: "#000000" },
-          { name: "theme-color", content: "#ffffff" },
+          { name: "msapplication-TileColor", content: "#0c0a09" },
+          { name: "theme-color", content: "#ffffc7", media: "(prefers-color-scheme: light)" },
+          { name: "theme-color", content: "#231411", media: "(prefers-color-scheme: dark)" },
           { name: "generator", content: Astro.generator },
         ],
       }}
     />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 	</head>
-	<body class="font-gillsans bg-[#fdfaf6] dark:bg-black text-[#333] dark:text-[#fdfaf6]">
-		<div id="cursor-circle"></div>
-		<Header client:load pathname={pathname}>
-			<ThemeSwitcher client:only />
-		</Header>
-		<div class="p-4 md:p-8 relative min-h-1/2">
+	<body class="font-gillsans">
+		<Header pathname={pathname} />
+		<main class={bare ? 'relative z-2' : 'p-4 md:p-8 relative min-h-1/2 z-2'}>
 			<slot />
-		</div>
+		</main>
 		<Footer />
-		<script src="@js/cursor.ts"></script>
 	</body>
 </html>
 
@@ -96,6 +79,5 @@ const {
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
 	}
 </style>

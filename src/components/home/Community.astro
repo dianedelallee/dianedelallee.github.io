@@ -1,0 +1,91 @@
+---
+const tickets = [
+  {
+    no: '001',
+    name: 'Le Romandie',
+    role: 'Volunteer',
+    text: 'Helping out at the Lausanne venue, and building a small iOS widget that lists its next concerts.',
+    links: [
+      { label: 'leromandie.ch', href: 'https://www.leromandie.ch/' },
+      { label: 'RomandieWidget', href: 'https://github.com/dianedelallee/RomandieWidget' },
+    ],
+  },
+  {
+    no: '002',
+    name: 'Petzi',
+    role: 'Volunteer',
+    text: 'Volunteering with the association that connects Swiss music venues and festivals.',
+    links: [{ label: 'About Petzi', href: 'https://www.petzi.ch/fr/association/a-propos-de-petzi/' }],
+  },
+];
+---
+<ul class="tickets">
+  {tickets.map((t) => (
+    <li class="ticket">
+      <div class="main">
+        <p class="role">{t.role}</p>
+        <h3>{t.name}</h3>
+        <p>{t.text}</p>
+        <p class="links">
+          {t.links.map((l) => <a href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>)}
+        </p>
+      </div>
+      <div class="stub" aria-hidden="true">
+        <span>Admit one</span>
+        <b>№ {t.no}</b>
+      </div>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .tickets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+  }
+  .ticket {
+    display: flex;
+    background: var(--ticket);
+    color: var(--on-ticket);
+    border: 2px solid var(--line);
+    box-shadow: 6px 6px 0 var(--line);
+    /* notches */
+    -webkit-mask: radial-gradient(circle 0.8rem at 0 50%, transparent 98%, #000) left / 51% 100% no-repeat,
+                  radial-gradient(circle 0.8rem at 100% 50%, transparent 98%, #000) right / 51% 100% no-repeat;
+    mask: radial-gradient(circle 0.8rem at 0 50%, transparent 98%, #000) left / 51% 100% no-repeat,
+          radial-gradient(circle 0.8rem at 100% 50%, transparent 98%, #000) right / 51% 100% no-repeat;
+    transition: transform 0.15s;
+  }
+  .ticket:nth-child(even) { transform: rotate(0.8deg); }
+  .ticket:nth-child(odd) { transform: rotate(-0.8deg); }
+  .main { flex: 1; padding: 1.5rem 1.5rem 1.5rem 2rem; }
+  .role {
+    margin: 0;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  h3 { margin: 0.2rem 0 0.5rem; font-size: clamp(2rem, 5vw, 3rem); line-height: 1; text-transform: uppercase; }
+  .main p { margin: 0.5rem 0 0; }
+  .links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 0.9rem; }
+  a { color: inherit; font-weight: 700; text-underline-offset: 3px; }
+  .stub {
+    flex: 0 0 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    border-left: 3px dashed currentColor;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+  }
+  .stub span, .stub b { writing-mode: vertical-rl; transform: rotate(180deg); }
+</style>

@@ -1,0 +1,117 @@
+---
+const { pathname } = Astro.props;
+const links = [
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Photos', href: '/#photos' },
+  { label: 'Community', href: '/#community' },
+  { label: 'Contact', href: 'mailto:diane.delallee@gmail.com' },
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Fatalement, home">
+    <span class="mark" aria-hidden="true">◐</span> Fatalement
+  </a>
+  <button class="theme" type="button" id="theme-toggle" aria-pressed="false">
+    <span class="bulb" aria-hidden="true"></span>
+    <span class="theme-label">Dark</span>
+  </button>
+  <nav aria-label="Main">
+    {links.map((l) => <a href={l.href} aria-current={l.href === pathname ? 'page' : undefined}>{l.label}</a>)}
+  </nav>
+</header>
+
+<script>
+  const root = document.documentElement;
+  const btn = document.getElementById('theme-toggle') as HTMLButtonElement;
+  const label = btn.querySelector('.theme-label') as HTMLElement;
+  const isDark = () =>
+    root.classList.contains('dark') ||
+    (!root.classList.contains('light') && matchMedia('(prefers-color-scheme: dark)').matches);
+  const sync = () => {
+    const dark = isDark();
+    btn.setAttribute('aria-pressed', String(dark));
+    label.textContent = dark ? 'Light' : 'Dark';
+  };
+  btn.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    root.classList.remove('light', 'dark');
+    root.classList.add(next);
+    try { localStorage.setItem('heroui-theme', next); } catch {}
+    sync();
+  });
+  sync();
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding: 0.9rem clamp(1rem, 4vw, 2.5rem);
+    border-bottom: 2px solid var(--line);
+    background: var(--bg);
+  }
+  .brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .mark { color: var(--accent); }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    order: 3;
+    width: 100%;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    padding: 0.2rem 0;
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover, nav a[aria-current] { border-bottom-color: var(--accent); }
+  .theme {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font: inherit;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    background: transparent;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem 0.35rem 0.6rem;
+  }
+  .theme:hover { background: var(--ink); color: var(--bg); }
+  .bulb {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    background: transparent;
+  }
+  .theme[aria-pressed='true'] .bulb {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 10px 2px var(--accent);
+  }
+  @media (min-width: 768px) {
+    nav { order: 0; width: auto; margin-left: auto; }
+    .theme { order: 4; }
+  }
+</style>
