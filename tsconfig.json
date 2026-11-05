@@ -19,7 +19,8 @@
 			"@styles/*": ["src/styles/*"],
 			"@js/*": ["src/js/*"],
 			"@lib/*": ["src/lib/*"],
-			"@icons/*": ["src/icons/*"]
+			"@icons/*": ["src/icons/*"],
+			"@data/*": ["src/data/*"]
 		}
   }
 }

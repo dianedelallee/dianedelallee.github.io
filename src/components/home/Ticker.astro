@@ -1,0 +1,25 @@
+---
+const words = ['Python', 'Ruby', 'Analog photography', 'Live music', 'Lausanne', 'Orchard', 'Open source'];
+---
+<div class="ticker" aria-hidden="true">
+  <div class="track">
+    {[0, 1].map(() => words.map((w) => <span>{w}<i>✺</i></span>))}
+  </div>
+</div>
+<style>
+  .ticker {
+    overflow: hidden;
+    border-block: 2px solid var(--line);
+    background: var(--band);
+    color: var(--on-band);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .track { display: inline-flex; animation: slide 30s linear infinite; padding: 0.4rem 0; }
+  span { padding-right: 1.5rem; }
+  i { font-style: normal; padding-left: 1.5rem; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+</style>

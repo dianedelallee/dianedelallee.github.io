@@ -7,29 +7,39 @@
   --font-gillsans: "Gillsans", "sans-serif"; 
 }
 
-html, a, button {
-  cursor: none;
+/* Theme tokens: cream / sandy brown / dusty brick / dark cyan, roles swapped per mode */
+:root {
+  --bg: #ffffc7; --card: #fffff0; --ink: #2b1a18; --muted: #5e4b46; --line: #2b1a18;
+  --accent: #3f6a6b; --on-accent: #ffffe0;
+  --band: #548687; --on-band: #1b0f0d;
+  --ticket: #fcaa67; --on-ticket: #2b1a18;
+  --deco: #b0413e; --sand: #fcaa67; --film: #1c2a2b;
+  color-scheme: light;
 }
-#cursor-circle {
-  /* border: 2px solid rgba(255, 255, 255, 0.8); */
-  position: fixed;
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  background: white;
-  transform: translate(-100%, -100%);
-  z-index: 9999;
-  transition:
-    width 0.3s ease,
-    height 0.3s ease,
-    background 0.3s ease,
-    border 0.3s ease;
+:root.dark {
+  --bg: #0c0a09; --card: #171312; --ink: #fff8d0; --muted: #cbbfae; --line: #fff8d0;
+  --accent: #548687; --on-accent: #0c0a09;
+  --band: #fcaa67; --on-band: #0c0a09;
+  --ticket: #ffffc7; --on-ticket: #0c0a09;
+  --deco: #b0413e; --sand: #fcaa67; --film: #26201d;
+  color-scheme: dark;
 }
-#cursor-circle.active {
-  width: 2.5rem;
-  height: 2.5rem;
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    --bg: #0c0a09; --card: #171312; --ink: #fff8d0; --muted: #cbbfae; --line: #fff8d0;
+  --accent: #548687; --on-accent: #0c0a09;
+  --band: #fcaa67; --on-band: #0c0a09;
+  --ticket: #ffffc7; --on-ticket: #0c0a09;
+  --deco: #b0413e; --sand: #fcaa67; --film: #26201d;
+    color-scheme: dark;
+  }
+}
+html { scroll-padding-top: 9rem; }
+@media (min-width: 768px) { html { scroll-padding-top: 5rem; } }
+body { background: var(--bg); color: var(--ink); font-size: 1.125rem; line-height: 1.55; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 .custom-fill-svg {
   fill: currentColor;
@@ -50,6 +60,4 @@ img {
   -webkit-user-select: none;
   user-select: none;
 }
-.about a {
-  opacity: 0.5;
-}
+

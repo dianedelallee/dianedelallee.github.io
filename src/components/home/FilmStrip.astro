@@ -1,0 +1,80 @@
+---
+import { featured, instagram } from '@data/featured';
+---
+<div class="wrap">
+  <ol class="strip" tabindex="0" aria-label="Featured photos. Scroll sideways to browse.">
+    {featured.map((f) => (
+      <li class="frame">
+        <a href={f.href} aria-label={`${f.label} series`}>
+          <picture>
+            <source srcset={`${f.base}.avif`} type="image/avif" />
+            <img src={`${f.base}.webp`} alt={`Photo from the ${f.label} series`} loading="lazy" width="300" height="200" draggable="false" />
+          </picture>
+          <span class="edge"><b>▶ {f.frame}</b><span>{f.label}</span><b>{f.frame}A</b></span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</div>
+<p class="links">
+  <a href="/works/">Browse the series →</a>
+  <a href="/photos/">Shuffle all photos →</a>
+  <a href={instagram.href} target="_blank" rel="noopener">Instagram {instagram.handle} ↗</a>
+</p>
+
+<style>
+  .wrap { margin-inline: calc(-1 * clamp(1rem, 4vw, 2.5rem)); }
+  .strip {
+    list-style: none;
+    margin: 0;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    background: var(--film);
+    border-block: 2px solid var(--line);
+    scrollbar-color: var(--sand) var(--film);
+  }
+  .frame {
+    position: relative;
+    flex: 0 0 clamp(16rem, 78vw, 23rem);
+    padding: 1.9rem 0.6rem;
+    scroll-snap-align: center;
+  }
+  /* sprocket holes */
+  .frame::before, .frame::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    height: 0.9rem;
+    background: var(--bg);
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='14'><rect x='4' y='2' width='14' height='10' rx='3'/></svg>") repeat-x left center / 22px 14px;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='14'><rect x='4' y='2' width='14' height='10' rx='3'/></svg>") repeat-x left center / 22px 14px;
+  }
+  .frame::before { top: 0.55rem; }
+  .frame::after { bottom: 0.55rem; }
+  a { display: block; color: #fffbd6; text-decoration: none; }
+  img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: #000; transition: filter 0.2s; }
+  a:hover img, a:focus-visible img { filter: contrast(1.08) saturate(1.2); }
+  .edge {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sand);
+  }
+  .edge span { color: #fffbd6; }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    margin: 1.5rem 0 0;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  }
+  .links a { color: var(--accent); font-weight: 700; text-underline-offset: 3px; }
+  .links a:hover { color: var(--ink); }
+</style>
