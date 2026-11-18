@@ -7,7 +7,7 @@ export type Project = {
   link?: { label: string; href: string };
 };
 
-// Mirrors the repositories pinned on https://github.com/dianedelallee
+// Mirrors the repositories pinned on https://github.com/dianedelallee (plus calendar)
 export const projects: Project[] = [
   {
     name: 'poste-restante',
@@ -17,6 +17,14 @@ export const projects: Project[] = [
     color: '#e34c26',
     repo: 'https://github.com/dianedelallee/poste-restante',
     link: { label: 'poste-restante.club', href: 'https://www.poste-restante.club' },
+  },
+  {
+    name: 'calendar',
+    description:
+      'Yearly calendar generator: 12 printable A4 pages with named full moons, Vaud and Geneva public holidays, hand-drawn styles and one picture per month.',
+    language: 'JavaScript',
+    color: '#f1e05a',
+    repo: 'https://github.com/dianedelallee/calendar',
   },
   {
     name: 'RomandieWidget',
