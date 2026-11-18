@@ -25,6 +25,7 @@ export const projects: Project[] = [
     language: 'JavaScript',
     color: '#f1e05a',
     repo: 'https://github.com/dianedelallee/calendar',
+    link: { label: 'fatalement.com/calendar', href: 'https://www.fatalement.com/calendar' },
   },
   {
     name: 'RomandieWidget',
